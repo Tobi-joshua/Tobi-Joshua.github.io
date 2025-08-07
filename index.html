@@ -88,40 +88,42 @@
       font-size: 1.1rem;
     }
     .stacks {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .stack-item {
-      background: white;
-      padding: 0.8rem 1rem;
-      border-radius: 6px;
-      border: 2px solid #007acc;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.95rem;
-      box-shadow: 0 2px 7px rgba(0,0,0,0.1);
-    }
-    .stacks h2 {
-  margin-bottom: 1rem;
+  margin: 3rem 0; /* adds space above and below */
+}
+
+.stacks h2 {
+  margin-bottom: 1.5rem; /* space below title */
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
 }
 
 .stack-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem; 
+  justify-content: center;
+  gap: 1rem;
 }
 
 .stack-item {
-  background: #f8f8f8;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   font-size: 0.95rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: #333;
+  transition: transform 0.2s ease;
 }
+
+/* Optional: slight hover effect for polish */
+.stack-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
     .projects {
       display: flex;
       flex-direction: column;
@@ -233,19 +235,40 @@
     #modal button:hover {
       background: #005f99;
     }
-    .search {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Visually hidden label for accessibility */
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 0 1rem;
 }
 
 #searchInput {
   width: 100%;
   max-width: 500px;
-  padding: 0.7rem 1rem;
+  padding: 0.75rem 1.25rem;
   font-size: 1rem;
-  border: 2px solid #007acc;
-  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+#searchInput:focus {
+  outline: none;
+  border-color: #007acc;
+  box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.2);
+}
+
 
   </style>
 </head>
@@ -264,21 +287,28 @@
       </p>
     </section>
 
-    <section class="stacks">
-      <h2>My Tech Stack</h2>
-      <div class="stack-item"><i class="fab fa-python"></i> Python</div>
-      <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
-      <div class="stack-item"><i class="fab fa-react"></i> React</div>
-      <div class="stack-item"><i class="fab fa-reactnative"></i> React Native/Expo</div>
-      <div class="stack-item"><i class="fab fa-js-square"></i> JavaScript</div>
-      <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
-      <div class="stack-item"><i class="fab fa-aws"></i> AWS EC2</div>
-      <div class="stack-item"><i class="fas fa-cloud"></i> Cloudflare R2</div>
-      <div class="stack-item"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
-      <div class="stack-item"><i class="fas fa-server"></i> Django Rest API</div>
-    </section>
+<section class="stacks">
+  <h2>My Tech Stack</h2>
+  <div class="stack-items">
+    <div class="stack-item"><i class="fab fa-python"></i> Python</div>
+    <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
+    <div class="stack-item"><i class="fab fa-react"></i> React</div>
+    <div class="stack-item"><i class="fab fa-react"></i> React Native / Expo</div>
+    <div class="stack-item"><i class="fab fa-js-square"></i> JavaScript</div>
+    <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
+    <div class="stack-item"><i class="fab fa-aws"></i> AWS EC2</div>
+    <div class="stack-item"><i class="fas fa-cloud"></i> Cloudflare R2</div>
+    <div class="stack-item"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
+    <div class="stack-item"><i class="fas fa-server"></i> Django Rest API</div>
+  </div>
+</section>
 
-    <section class="search">
+    
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <section class="search-container">
+  <label for="searchInput" class="visually-hidden">Search Projects</label>
   <input
     type="text"
     id="searchInput"
@@ -287,10 +317,7 @@
   />
 </section>
 
-    
-    <section class="projects">
-      <h2>Projects</h2>
-
+      
       <div
         class="project-card"
         tabindex="0"
