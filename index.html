@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tobi Joshua Portfolio</title>
+
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  
+  <!-- party.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
+  <style>
+    /* Reset + base styles */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f7f9;
+      color: #333;
+      line-height: 1.6;
+      user-select: none;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background: #282c34;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0.2rem 0;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.3rem 0 0;
+      font-style: italic;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    section h2 {
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: #007acc;
+    }
+    .about p {
+      font-size: 1.1rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      user-select: none;
+    }
+    .project-card:hover {
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .project-header-image {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    .project-content {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card h3 {
+      margin: 0 0 0.5rem 0;
+    }
+    .project-card p {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .project-links a {
+      margin-right: 1rem;
+      font-size: 1.3rem;
+      color: #007acc;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .project-links a:hover {
+      color: #004d99;
+    }
+    .contact p {
+      font-size: 1rem;
+    }
+    .social-links a {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      color: #282c34;
+      transition: color 0.3s ease;
+      position: relative;
+      cursor: pointer;
+    }
+    .social-links a:hover {
+      color: #007acc;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #ddd;
+      margin-top: 3rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Modal styles for private repo message */
+    #modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    }
+    #modal .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    #modal button {
+      margin-top: 1rem;
+      padding: 0.5rem 1.2rem;
+      background: #007acc;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #modal button:hover {
+      background: #005f99;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tobi Joshua Samuel</h1>
+    <p>Data Scientist | Software Engineer | ML & Web Developer</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I’m Tobi Joshua, a passionate Data Scientist and Software Engineer.
+        I work on machine learning, deep learning, web and mobile applications.
+        I enjoy building projects that make an impact.
+      </p>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <!-- Public repo example -->
+      <div class="project-card" tabindex="0" data-private="false" role="button" aria-pressed="false">
+        <img
+          src="https://user-images.githubusercontent.com/123456/your-project-image.png"
+          alt="React Frontend Project"
+          class="project-header-image"
+        />
+        <div class="project-content">
+          <h3>React Frontend for Expert Hive Tutors</h3>
+          <p>A responsive React app integrated with Django backend APIs for an online tutoring marketplace.</p>
+          <div class="project-links">
+            <a href="https://github.com/Tobi-joshua/experthivetutors-frontend" target="_blank" title="GitHub Repo" aria-label="GitHub Repo">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://experthivetutors.vercel.app" target="_blank" title="Live Demo" aria-label="Live Demo">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Private repo example -->
+      <div class="project-card" tabindex="0" data-private="true" role="button" aria-pressed="false">
+        <img
+          src="https://user-images.githubusercontent.com/123456/your-private-project-image.png"
+          alt="Private Django REST API Project"
+          class="project-header-image"
+        />
+        <div class="project-content">
+          <h3>Python Django REST API</h3>
+          <p>This backend API is private. Please email for access.</p>
+          <div class="project-links">
+            <!-- No direct GitHub link for private repo -->
+            <a href="#" title="Request Access" aria-label="Request Access">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out via email or connect on LinkedIn and GitHub.</p>
+      <div class="social-links">
+        <a href="mailto:tobilobasam3@gmail.com" title="Email" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://linkedin.com/in/tobi-joshua" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Tobi-joshua" target="_blank" title="GitHub" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Tobi Joshua Samuel
+  </footer>
+
+  <!-- Modal for private repo message -->
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal-content">
+      <h3 id="modalTitle">Private Repository</h3>
+      <p id="modalDesc">This repository is private. Please email <a href="mailto:info@experthivetutors.com">info@experthivetutors.com</a> for access.</p>
+      <button id="closeModalBtn">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    // Show modal
+    function showModal() {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // prevent scroll
+      closeModalBtn.focus();
+    }
+
+    // Hide modal
+    function hideModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    closeModalBtn.addEventListener('click', hideModal);
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal) hideModal();
+    });
+
+    // Attach party.js confetti and private repo check on project cards & links
+    document.querySelectorAll('.project-card, .project-links a, .social-links a').forEach(elem => {
+      elem.style.position = 'relative'; // for confetti absolute positioning
+
+      elem.addEventListener('click', event => {
+        event.preventDefault();
+
+        // Trigger confetti at click location
+        party.confetti(event.target, {
+          count: party.variation.range(20, 40),
+          spread: 70,
+          speed: 500,
+          size: 1.5
+        });
+
+        // Special logic for private repo cards
+        const card = event.target.closest('.project-card');
+        if (card) {
+          const isPrivate = card.getAttribute('data-private') === 'true';
+
+          if (isPrivate) {
+            // Show modal
+            showModal();
+            return;
+          }
+
+          // If clicking a link in public repo, open link normally
+          if (event.target.closest('a') && event.target.closest('a').href) {
+            const link = event.target.closest('a').href;
+            window.open(link, '_blank', 'noopener');
+            return;
+          }
+        }
+      });
+    });
+
+    // Accessibility: Allow keyboard users to "click" cards with Enter or Space
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
