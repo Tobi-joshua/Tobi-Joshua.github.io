@@ -95,8 +95,6 @@
 
 .stacks h2 {
   margin-bottom: 2rem;
-  font-size: 1.8rem;
-  /* Removed center alignment */
   text-align: left;
 }
 
@@ -143,7 +141,28 @@
   gap: 1.5rem;
   padding: 0 1rem;
 }
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.project-status {
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.project-status.completed {
+  background-color: #28a745; /* Green */
+}
+
+.project-status.ongoing {
+  background-color: #ffc107; /* Amber */
+}
 /* Project card base styles */
 .project-card {
   display: flex;
@@ -385,94 +404,94 @@
 
 
 
-    
-    <section class="projects">
-      <h2>Projects</h2>
+ <section class="projects">
+  <h2>Projects</h2>
 
-      <section class="search-container">
-  <label for="searchInput" class="visually-hidden">Search Projects</label>
-  <input
-    type="text"
-    id="searchInput"
-    placeholder="Search projects..."
-    aria-label="Search Projects"
-  />
-</section>
+  <section class="search-container">
+    <label for="searchInput" class="visually-hidden">Search Projects</label>
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search projects..."
+      aria-label="Search Projects"
+    />
+  </section>
 
-      
-      <div
-        class="project-card"
-        tabindex="0"
-        role="button"
-        aria-pressed="false"
-        data-private="false"
-        data-link="project.html?id=1"
-      >
-        <img
-          src="https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959"
-          alt="React Frontend Project"
-          class="project-header-image"
-        />
-        <div class="project-content">
-          <h3>React Frontend for Expert Hive Tutors Website</h3>
-          <p>
-            A responsive React app integrated with Django backend APIs for an online tutoring marketplace.
-            <strong>Expert Hive Tutors</strong> is a web-based EdTech platform designed to connect students with verified expert tutors for real-time academic support through question posting.
-            Students can upload questions, receive accurate solutions, and buy or sell study materials.
-            The platform emphasizes secure transactions, tutor accountability, and compliance with Nigerian education standards — delivering a seamless and trustworthy academic assistance experience.
-          </p>
-          <div class="project-links">
-           <a href="#" class="private-link" title="GitHub (Private)" aria-label="GitHub (Private)">
-  <i class="fab fa-github"></i>
-</a>
-<a href="#" class="private-link" title="Live Demo (Private)" aria-label="Live Demo (Private)">
-  <i class="fas fa-external-link-alt"></i>
-</a>
-          </div>
-        </div>
+  <div
+    class="project-card"
+    tabindex="0"
+    role="button"
+    aria-pressed="false"
+    data-private="false"
+    data-link="project.html?id=1"
+  >
+    <img
+      src="https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959"
+      alt="React Frontend Project"
+      class="project-header-image"
+    />
+    <div class="project-content">
+      <div class="project-header">
+        <h3>React Frontend for Expert Hive Tutors Website</h3>
+        <span class="project-status completed">Completed</span>
       </div>
-
-<div
-  class="project-card"
-  tabindex="0"
-  role="button"
-  aria-pressed="false"
-  data-private="false"
-  data-link="project.html?id=2"
->
-  <img
-    src="https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741"
-    alt="Expert Hive Tutors Django REST API"
-    class="project-header-image"
-  />
-  <div class="project-content">
-    <h3>Expert Hive Tutors – Django REST API 🐝📚</h3>
-    <p>
-      This repository contains the API backend for the <strong>Expert Hive Tutors</strong> platform, built using Django and Django REST Framework (DRF). It enables core functionality like managing client-posted questions and notifying tutors via email and push messages.
-    </p>
-    <ul>
-      <li>📌 Manage student questions (create, retrieve, update)</li>
-      <li>📬 Email + SMS notifications to tutors</li>
-    </ul>
-    <p><strong>🔗 Sample API Endpoints:</strong></p>
-    <ul>
-      <li>✅ <strong>GET /questions/{pk}</strong>: Retrieve details of a question</li>
-      <li>✅ <strong>POST /questions/{pk}</strong>: Edit question and notify tutors</li>
-    </ul>
-    <div class="project-links">
-      <a href="https://github.com/Tobi-joshua/Expert-Hive-Tutors-API" title="View GitHub Repo" aria-label="GitHub Repo">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.experthivetutors.com/expert-hive-api-type1/" title="Live API Demo" aria-label="Live API Demo">
-        <i class="fas fa-external-link-alt"></i>
-      </a>
+      <p>
+        A responsive React app integrated with Django backend APIs for an online tutoring marketplace.
+        <strong>Expert Hive Tutors</strong> is a web-based EdTech platform designed to connect students with verified expert tutors for real-time academic support through question posting.
+        Students can upload questions, receive accurate solutions, and buy or sell study materials.
+        The platform emphasizes secure transactions, tutor accountability, and compliance with Nigerian education standards — delivering a seamless and trustworthy academic assistance experience.
+      </p>
+      <div class="project-links">
+        <a href="#" class="private-link" title="GitHub (Private)" aria-label="GitHub (Private)">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="private-link" title="Live Demo (Private)" aria-label="Live Demo (Private)">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
     </div>
   </div>
-</div>
 
-
-
-
+  <div
+    class="project-card"
+    tabindex="0"
+    role="button"
+    aria-pressed="false"
+    data-private="false"
+    data-link="project.html?id=2"
+  >
+    <img
+      src="https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741"
+      alt="Expert Hive Tutors Django REST API"
+      class="project-header-image"
+    />
+    <div class="project-content">
+      <div class="project-header">
+        <h3>Expert Hive Tutors – Django REST API 🐝📚</h3>
+        <span class="project-status ongoing">Ongoing</span>
+      </div>
+      <p>
+        This repository contains the API backend for the <strong>Expert Hive Tutors</strong> platform, built using Django and Django REST Framework (DRF). It enables core functionality like managing client-posted questions and notifying tutors via email and push messages.
+      </p>
+      <ul>
+        <li>📌 Manage student questions (create, retrieve, update)</li>
+        <li>📬 Email + SMS notifications to tutors</li>
+      </ul>
+      <p><strong>🔗 Sample API Endpoints:</strong></p>
+      <ul>
+        <li>✅ <strong>GET /questions/{pk}</strong>: Retrieve details of a question</li>
+        <li>✅ <strong>POST /questions/{pk}</strong>: Edit question and notify tutors</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://github.com/Tobi-joshua/Expert-Hive-Tutors-API" title="View GitHub Repo" aria-label="GitHub Repo">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.experthivetutors.com/expert-hive-api-type1/" title="Live API Demo" aria-label="Live API Demo">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 
 
 
