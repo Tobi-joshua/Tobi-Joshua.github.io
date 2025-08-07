@@ -329,7 +329,41 @@
   private: true
 },
 
-      
+      "4": {
+  "title": "Real-time Intrusion Detection System (Windows)",
+  "images": [
+    { 
+      "src": "https://ik.imagekit.io/experthivetutors/ds.png?updatedAt=1754607867802", 
+      "title": "IDS Dashboard Screenshot" 
+    }
+  ],
+  "description": `This project implements a Real-time Intrusion Detection System (IDS) for Windows, leveraging Machine Learning to detect and classify network intrusions.
+
+The system uses:
+• Supervised Learning: Random Forest model for identifying known attacks from CICIDS 2018 & SCVIC-APT datasets.
+• Unsupervised Learning: Autoencoder model for anomaly detection.
+
+Key Requirements:
+• Windows OS
+• Python 3.9 (ensure "Add to PATH" during installation)
+• Npcap 1.71 (for packet capture)
+
+Setup:
+1. Create virtual environment: python3.9 -m venv venv
+2. Activate environment: . /venv/Scripts/activate
+3. Install dependencies: python -m pip install -r requirements.txt
+4. Run application: python application.py
+5. Access web interface: http://localhost:5000
+
+Troubleshooting:
+• Ensure Python installation has admin privileges.
+• Follow Npcap installer instructions for proper functionality.`,
+  "links": [
+    { "href": "https://github.com/Tobi-joshua/Real-time-Intrusion-Detection-System-on-Windows", "label": "GitHub Repo" },
+  ],
+  "private": false
+},
+
     };
 
     const project = projects[id];
