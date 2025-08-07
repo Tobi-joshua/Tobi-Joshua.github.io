@@ -202,18 +202,56 @@
         private: true
       },
 
-      "2": {
-        title: "Private Django REST API",
-        images: [
-          { src: "https://user-images.githubusercontent.com/123456/your-private-project-image.png", title: "API Schema" }
-        ],
-        description: `This backend API is private. Please email info@experthivetutors.com for access.`,
-        links: [
-          { href: "#", label: "GitHub Repo" },
-          { href: "#", label: "Live Demo" }
-        ],
-        private: false
-      }
+  "2": {
+  title: "Expert Hive Tutors Django REST API 🐝📚",
+  images: [
+    { src: "https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741", title: "API Homepage" },
+    { src: "https://ik.imagekit.io/experthivetutors/registration.png?updatedAt=1754596061218", title: "Registration API" },
+    { src: "https://ik.imagekit.io/experthivetutors/user_management.png?updatedAt=1754596062439", title: "User Management" },
+    { src: "https://ik.imagekit.io/experthivetutors/generalAPI.png?updatedAt=1754596062425", title: "General APIs" },
+    { src: "https://ik.imagekit.io/experthivetutors/enrollments.png?updatedAt=1754596062370", title: "Enrollments" }
+  ],
+  description: `
+    <p>
+      <strong>Expert Hive Tutors API</strong> is a robust backend implementation built using <strong>Django</strong> and <strong>Django REST Framework (DRF)</strong>. It powers core features of the platform, such as question management, tutor notifications, and secure API consumption.
+    </p>
+    <h4>📌 Key Features</h4>
+    <ul>
+      <li>Manage student-posted questions: create, retrieve, and update entries</li>
+      <li>Send notifications to tutors via email and SMS</li>
+      <li>Well-documented and versioned API with Swagger/OpenAPI</li>
+    </ul>
+
+    <h4>🔗 API Endpoints</h4>
+    <ul>
+      <li><strong>GET /questions/{pk}</strong>: Retrieve details of a specific question</li>
+      <li><strong>POST /questions/{pk}</strong>: Edit question and notify tutors</li>
+    </ul>
+
+    <h4>🛠️ Technologies Used</h4>
+    <ul>
+      <li><strong>Django</strong> – High-level Python web framework</li>
+      <li><strong>DRF</strong> – Django REST Framework for API development</li>
+      <li><strong>Swagger/OpenAPI</strong> – For interactive API documentation</li>
+    </ul>
+
+    <h4>📑 Documentation</h4>
+    <p>Full API docs available via Swagger/OpenAPI interface.</p>
+
+    <h4>💡 Future Enhancements</h4>
+    <ul>
+      <li>WebSocket support for real-time updates</li>
+      <li>Push notifications for tutors</li>
+      <li>Analytics dashboard for monitoring trends</li>
+      <li>3rd-party integrations to expand notifications</li>
+    </ul>
+  `,
+  links: [
+    { href: "https://github.com/Tobi-joshua/Expert-Hive-Tutors-API", label: "GitHub Repo" },
+    { href: "https://www.experthivetutors.com/expert-hive-api-type1/", label: "Live Demo" }
+  ],
+  private: false
+}
     };
 
     const project = projects[id];
