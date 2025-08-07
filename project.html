@@ -258,7 +258,7 @@
 
     if (!project) {
       document.getElementById("project-title").textContent = "Project not found.";
-      document.getElementById("description").textContent = "";
+      document.getElementById("description").innerHTML = "";
       document.getElementById("images").innerHTML = "";
       document.getElementById("links").innerHTML = "";
     } else {
@@ -278,7 +278,8 @@
       });
 
       // Description
-      document.getElementById("description").textContent = project.description;
+document.getElementById("description").innerHTML = project.description;
+
 
       // Links
       const linksDiv = document.getElementById("links");
