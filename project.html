@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Details</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f4f7f9;
+      color: #333;
+      line-height: 1.5;
+    }
+    h1, h2 {
+      color: #007acc;
+    }
+    #images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .image-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.12);
+      overflow: hidden;
+      max-width: 280px;
+      flex: 1 1 280px;
+      display: flex;
+      flex-direction: column;
+      cursor: default;
+    }
+    .image-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+    .image-title {
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      background: #007acc;
+      color: white;
+      text-align: center;
+    }
+    #description {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.12);
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+    #links {
+      margin-bottom: 2rem;
+    }
+    #links a {
+      display: inline-block;
+      margin-right: 1.5rem;
+      padding: 0.6rem 1.2rem;
+      background: #007acc;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    #links a:hover,
+    #links a:focus {
+      background: #005f99;
+      outline: none;
+    }
+    #back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #007acc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    #back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" id="back-link" aria-label="Go back to portfolio">&larr; Back to Portfolio</a>
+  <h1 id="project-title">Loading...</h1>
+
+  <div id="images"></div>
+
+  <div id="description"></div>
+
+  <div id="links"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    // Define your projects here
+    const projects = {
+      "1": {
+        title: "Expert Hive Tutors Website",
+        images: [
+          { src: "https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959", title: "React Frontend Screenshot" },
+          { src: "https://ik.imagekit.io/experthivetutors/another-screenshot.png", title: "Django Backend Dashboard" }
+        ],
+        description: `Expert Hive Tutors is a web-based EdTech platform designed to connect students with verified expert tutors for real-time academic support through question posting.
+        Students can upload questions, receive accurate solutions, and buy or sell study materials.
+        The platform emphasizes secure transactions, tutor accountability, and compliance with Nigerian education standards — delivering a seamless and trustworthy academic assistance experience.`,
+        links: [
+          { href: "https://github.com/Tobi-Joshua/ExpertHive", label: "GitHub Repo" },
+          { href: "https://expert-hive-live-demo.example.com", label: "Live Demo" }
+        ]
+      },
+
+      "2": {
+        title: "Private Django REST API",
+        images: [
+          { src: "https://user-images.githubusercontent.com/123456/your-private-project-image.png", title: "API Schema" }
+        ],
+        description: `This backend API is private. Please email info@experthivetutors.com for access.`,
+        links: [
+          { href: "mailto:info@experthivetutors.com", label: "Request Access" }
+        ]
+      }
+      // Add more projects as needed
+    };
+
+    const project = projects[id];
+
+    if (!project) {
+      document.getElementById("project-title").textContent = "Project not found.";
+      document.getElementById("description").textContent = "";
+      document.getElementById("images").innerHTML = "";
+      document.getElementById("links").innerHTML = "";
+    } else {
+      document.getElementById("project-title").textContent = project.title;
+
+      // Populate images section
+      const imagesDiv = document.getElementById("images");
+      imagesDiv.innerHTML = "";
+      project.images.forEach(({src, title}) => {
+        const card = document.createElement("div");
+        card.className = "image-card";
+        card.innerHTML = `
+          <img src="${src}" alt="${title}" />
+          <div class="image-title">${title}</div>
+        `;
+        imagesDiv.appendChild(card);
+      });
+
+      // Populate description
+      document.getElementById("description").textContent = project.description;
+
+      // Populate links
+      const linksDiv = document.getElementById("links");
+      linksDiv.innerHTML = "";
+      project.links.forEach(({href, label}) => {
+        const a = document.createElement("a");
+        a.href = href;
+        a.textContent = label;
+        a.target = href.startsWith("http") ? "_blank" : "";
+        a.rel = href.startsWith("http") ? "noopener" : "";
+        linksDiv.appendChild(a);
+      });
+    }
+  </script>
+</body>
+</html>
