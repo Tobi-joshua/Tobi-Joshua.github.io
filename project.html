@@ -330,38 +330,67 @@
 },
 
       "4": {
-  "title": "Real-time Intrusion Detection System (Windows)",
-  "images": [
+  title: "Real-time Intrusion Detection System (Windows)",
+  images: [
     { 
-      "src": "https://ik.imagekit.io/experthivetutors/ds.png?updatedAt=1754607867802", 
-      "title": "IDS Dashboard Screenshot" 
+      src: "https://ik.imagekit.io/experthivetutors/ds.png?updatedAt=1754607867802", 
+      title: "IDS Dashboard Screenshot" 
     }
   ],
-  "description": `This project implements a Real-time Intrusion Detection System (IDS) for Windows, leveraging Machine Learning to detect and classify network intrusions.
+ description: `
+    <p>
+      This project implements a <strong>Real-time Intrusion Detection System (IDS)</strong> for Windows that leverages machine learning to detect and classify network intrusions.
+    </p>
 
-The system uses:
-• Supervised Learning: Random Forest model for identifying known attacks from CICIDS 2018 & SCVIC-APT datasets.
-• Unsupervised Learning: Autoencoder model for anomaly detection.
+    <h4>System Overview</h4>
+    <ul>
+      <li><strong>Supervised learning</strong>: Random Forest model used to identify known attacks (trained on <em>CICIDS 2018</em> and <em>SCVIC-APT</em> datasets).</li>
+      <li><strong>Unsupervised learning</strong>: Autoencoder-based anomaly detection for unknown/novel threats.</li>
+    </ul>
 
-Key Requirements:
-• Windows OS
-• Python 3.9 (ensure "Add to PATH" during installation)
-• Npcap 1.71 (for packet capture)
+    <h4>Key Requirements</h4>
+    <ul>
+      <li>Windows OS</li>
+      <li>Python 3.9 (&mdash; ensure you check <code>"Add Python 3.9 to PATH"</code> during installation)</li>
+      <li>Npcap 1.71 (required for packet capture)</li>
+    </ul>
 
-Setup:
-1. Create virtual environment: python3.9 -m venv venv
-2. Activate environment: . /venv/Scripts/activate
-3. Install dependencies: python -m pip install -r requirements.txt
-4. Run application: python application.py
-5. Access web interface: http://localhost:5000
+    <h4>Installation & Setup</h4>
+    <ol>
+      <li>Create a virtual environment:
+        <pre><code>python3.9 -m venv venv</code></pre>
+      </li>
+      <li>Activate the virtual environment:
+        <pre><code>. /venv/Scripts/activate</code></pre>
+      </li>
+      <li>Install dependencies:
+        <pre><code>python -m pip install -r requirements.txt</code></pre>
+      </li>
+      <li>Run the application:
+        <pre><code>python application.py</code></pre>
+      </li>
+      <li>Open the web UI in your browser:
+        <p><code>http://localhost:5000</code></p>
+      </li>
+    </ol>
 
-Troubleshooting:
-• Ensure Python installation has admin privileges.
-• Follow Npcap installer instructions for proper functionality.`,
-  "links": [
-    { "href": "https://github.com/Tobi-joshua/Real-time-Intrusion-Detection-System-on-Windows", "label": "GitHub Repo" }
+    <h4>Troubleshooting</h4>
+    <ul>
+      <li><strong>Python:</strong> If installation fails, run installer with administrative privileges and ensure PATH option is selected.</li>
+      <li><strong>Npcap:</strong> Follow Npcap installer prompts and reboot if required; ensure Npcap is installed in "WinPcap compatible" mode if asked.</li>
+    </ul>
+
+    <h4>Notes</h4>
+    <p>
+      The IDS includes both detection (models) and a lightweight web interface for monitoring alerts and model performance. The codebase contains scripts for training the Random Forest and Autoencoder models, evaluation notebooks, and a packaged service for running inference on live capture streams.
+    </p>
+
+    <p><em>This repository is private — please request access to view the code, datasets, or demo.</em></p>
+  `,
+  links: [
+    { href: "https://github.com/Tobi-joshua/Real-time-Intrusion-Detection-System-on-Windows", label: "GitHub Repo" }
   ],
-  "private": false
+  private: false
 }
     };
 
