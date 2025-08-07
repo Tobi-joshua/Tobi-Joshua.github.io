@@ -103,6 +103,25 @@
       font-size: 0.95rem;
       box-shadow: 0 2px 7px rgba(0,0,0,0.1);
     }
+    .stacks h2 {
+  margin-bottom: 1rem;
+}
+
+.stack-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; 
+}
+
+.stack-item {
+  background: #f8f8f8;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
     .projects {
       display: flex;
       flex-direction: column;
@@ -182,7 +201,8 @@
       border-top: 1px solid #ddd;
       margin-top: 3rem;
     }
-    /* Modal styles for private repo message */
+
+    
     #modal {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -213,6 +233,20 @@
     #modal button:hover {
       background: #005f99;
     }
+    .search {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #007acc;
+  border-radius: 6px;
+}
+
   </style>
 </head>
 <body>
@@ -232,7 +266,6 @@
 
     <section class="stacks">
       <h2>My Tech Stack</h2>
-      <br/>
       <div class="stack-item"><i class="fab fa-python"></i> Python</div>
       <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
       <div class="stack-item"><i class="fab fa-react"></i> React</div>
@@ -245,6 +278,16 @@
       <div class="stack-item"><i class="fas fa-server"></i> Django Rest API</div>
     </section>
 
+    <section class="search">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search projects..."
+    aria-label="Search Projects"
+  />
+</section>
+
+    
     <section class="projects">
       <h2>Projects</h2>
 
@@ -270,39 +313,77 @@
             The platform emphasizes secure transactions, tutor accountability, and compliance with Nigerian education standards — delivering a seamless and trustworthy academic assistance experience.
           </p>
           <div class="project-links">
-            <a href="#" title="GitHub Repo" aria-label="GitHub Repo">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="#" title="Live Demo" aria-label="Live Demo">
-              <i class="fas fa-external-link-alt"></i>
-            </a>
+           <a href="#" class="private-link" title="GitHub (Private)" aria-label="GitHub (Private)">
+  <i class="fab fa-github"></i>
+</a>
+<a href="#" class="private-link" title="Live Demo (Private)" aria-label="Live Demo (Private)">
+  <i class="fas fa-external-link-alt"></i>
+</a>
           </div>
         </div>
       </div>
 
-      <div
-        class="project-card"
-        tabindex="0"
-        role="button"
-        aria-pressed="false"
-        data-private="true"
-        data-link="project.html?id=2"
-      >
-        <img
-          src="https://user-images.githubusercontent.com/123456/your-private-project-image.png"
-          alt="Private Django REST API Project"
-          class="project-header-image"
-        />
-        <div class="project-content">
-          <h3>Python Django REST API</h3>
-          <p>This backend API is private. Please email for access.</p>
-          <div class="project-links">
-            <a href="mailto:info@experthivetutors.com" title="Request Access" aria-label="Request Access">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+<div
+  class="project-card"
+  tabindex="0"
+  role="button"
+  aria-pressed="false"
+  data-private="false"
+  data-link="project.html?id=2"
+>
+  <img
+    src="https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741"
+    alt="Expert Hive Tutors Django REST API"
+    class="project-header-image"
+  />
+  <div class="project-content">
+    <h3>Expert Hive Tutors – Django REST API 🐝📚</h3>
+    <p>
+      This repository contains the API backend for the <strong>Expert Hive Tutors</strong> platform, built using Django and Django REST Framework (DRF). It enables core functionality like managing client-posted questions and notifying tutors via email and push messages.
+    </p>
+    <ul>
+      <li>📌 Manage student questions (create, retrieve, update)</li>
+      <li>📬 Email + SMS notifications to tutors</li>
+    </ul>
+    <p><strong>🔗 Sample API Endpoints:</strong></p>
+    <ul>
+      <li>✅ <strong>GET /questions/{pk}</strong>: Retrieve details of a question</li>
+      <li>✅ <strong>POST /questions/{pk}</strong>: Edit question and notify tutors</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://github.com/Tobi-joshua/Expert-Hive-Tutors-API" title="View GitHub Repo" aria-label="GitHub Repo">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.experthivetutors.com/expert-hive-api-type1/" title="Live API Demo" aria-label="Live API Demo">
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
     </section>
 
     <section class="contact">
@@ -341,64 +422,93 @@
     </div>
   </div>
 
-  <script>
-    const modal = document.getElementById('modal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
 
-    // Show modal
-    function showModal() {
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      closeModalBtn.focus();
-    }
 
-    // Hide modal
-    function hideModal() {
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-    }
 
-    closeModalBtn.addEventListener('click', hideModal);
-    modal.addEventListener('click', (e) => {
-      if(e.target === modal) hideModal();
+  
+ <script>
+  const modal = document.getElementById('modal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+
+  function showModal() {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    closeModalBtn?.focus();
+  }
+
+  function hideModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // Handle clicks on links with .private-link (prevent default and show modal)
+  document.querySelectorAll('.private-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      showModal();
     });
+  });
 
-    // Attach click handlers to project cards
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.addEventListener('click', (event) => {
-        // Prevent default if clicked on link inside card
-        if (event.target.closest('a')) {
-          return;
-        }
-        // Trigger party.js confetti at click position
-        party.confetti(event.currentTarget, {
+  // Close modal when clicking "X" button
+  closeModalBtn?.addEventListener('click', hideModal);
+
+  // Close modal when clicking outside the modal content
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      hideModal();
+    }
+  });
+
+  // Project card interactions
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', (event) => {
+      // Allow inner links to work (e.g., GitHub or demo links)
+      if (event.target.closest('a')) return;
+
+      // 🎉 Confetti animation on click
+      if (typeof party !== 'undefined' && party.confetti) {
+        party.confetti(card, {
           count: party.variation.range(20, 40),
           spread: 70,
           speed: 500,
           size: 1.5
         });
+      }
 
-        const isPrivate = card.getAttribute('data-private') === 'true';
-        if (isPrivate) {
-          showModal();
-          return;
-        }
+      const isPrivate = card.getAttribute('data-private') === 'true';
 
+      if (isPrivate) {
+        showModal();
+      } else {
         const link = card.getAttribute('data-link');
         if (link) {
           window.location.href = link;
         }
-      });
-
-      // Keyboard support: open on Enter or Space
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          card.click();
-        }
-      });
+      }
     });
-  </script>
+
+    // Accessibility: open on Enter or Space
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
+</script>
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+
+    projectCards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(query) ? 'flex' : 'none';
+    });
+  });
+</script>
 
   <script>(function(w,d,s,u,o){w._cyA11yConfig={"iconId":"default","position":{"mobile":"bottom-right","desktop":"bottom-right"},"language":{"default":"en","selected":[]}};var js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.src=u;js.async=true;fjs.parentNode.insertBefore(js,fjs);})(window,document,"script","https://cdn-cookieyes.com/widgets/accessibility.js?id=15a52046-1dc2-4123-abc2-6e809a8c3e84");</script>
 
