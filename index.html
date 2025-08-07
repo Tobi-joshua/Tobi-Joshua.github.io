@@ -108,6 +108,10 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
+    .projects > h2 + * {
+  margin-top: 1rem; 
+}
+
     @media (max-width: 800px) {
       .projects {
         grid-template-columns: 1fr;
@@ -234,10 +238,11 @@
 
     <section class="stacks">
       <h2>My Tech Stack</h2>
+      <br/>
       <div class="stack-item"><i class="fab fa-python"></i> Python</div>
       <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
       <div class="stack-item"><i class="fab fa-react"></i> React</div>
-      <div class="stack-item"><i class="fab fa-react"></i> React Native/Expo</div>
+      <div class="stack-item"><i class="fab fa-reactnative"></i> React Native/Expo</div>
       <div class="stack-item"><i class="fab fa-js-square"></i> JavaScript</div>
         <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
       <div class="stack-item"><i class="fab fa-aws"></i> AWS EC2</div>
@@ -248,30 +253,38 @@
 
     <section class="projects">
       <h2>Projects</h2>
-
-      <!-- Public repo example -->
-      <div class="project-card" tabindex="0" data-private="false" role="button" aria-pressed="false">
+<br/><br/>
+      
+      <!-- Private repo example -->
+       <a href="project.html?id=1" class="project-card" tabindex="0" role="button" aria-pressed="false" data-private="false">
         <img
-          src="https://user-images.githubusercontent.com/123456/your-project-image.png"
+          src="https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959"
           alt="React Frontend Project"
           class="project-header-image"
         />
         <div class="project-content">
-          <h3>React Frontend for Expert Hive Tutors</h3>
-          <p>A responsive React app integrated with Django backend APIs for an online tutoring marketplace.</p>
+          <h3>React Frontend for Expert Hive Tutors Website</h3>
+         <p>
+  A responsive React app integrated with Django backend APIs for an online tutoring marketplace.
+  <strong>Expert Hive Tutors</strong> is a web-based EdTech platform designed to connect students with verified expert tutors for real-time academic support through question posting. 
+  Students can upload questions, receive accurate solutions, and buy or sell study materials. 
+  The platform emphasizes secure transactions, tutor accountability, and compliance with Nigerian education standards — delivering a seamless and trustworthy academic assistance experience.
+</p>
+
           <div class="project-links">
-            <a href="https://github.com/Tobi-joshua/experthivetutors-frontend" target="_blank" title="GitHub Repo" aria-label="GitHub Repo">
+            <a  href="#" title="Request Access" aria-label="Request Access">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://experthivetutors.vercel.app" target="_blank" title="Live Demo" aria-label="Live Demo">
+            <a  href="#" title="Request Access" aria-label="Request Access">
               <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
         </div>
       </div>
-
+       </a>
+      
       <!-- Private repo example -->
-      <div class="project-card" tabindex="0" data-private="true" role="button" aria-pressed="false">
+       <a href="project.html?id=2" class="project-card" tabindex="0" role="button" aria-pressed="false" data-private="false">
         <img
           src="https://user-images.githubusercontent.com/123456/your-private-project-image.png"
           alt="Private Django REST API Project"
@@ -288,22 +301,26 @@
           </div>
         </div>
       </div>
+       </a>
     </section>
 
     <section class="contact">
       <h2>Contact</h2>
       <p>Feel free to reach out via email or connect on LinkedIn and GitHub.</p>
-      <div class="social-links">
-        <a href="mailto:tobilobasam3@gmail.com" title="Email" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://linkedin.com/in/tobi-joshua" target="_blank" title="LinkedIn" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/Tobi-joshua" target="_blank" title="GitHub" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+     <div class="social-links">
+  <a href="mailto:tobilobasam3@gmail.com" title="Email" aria-label="Email">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/tobi-joshua-aaa08a191/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/Tobi-joshua" target="_blank" title="GitHub" aria-label="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://x.com/TobiJoshua123" target="_blank" title="Twitter" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+</div>
     </section>
   </main>
 <footer>
@@ -389,5 +406,9 @@
       });
     });
   </script>
+  	
+<script>(function(w,d,s,u,o){w._cyA11yConfig={"iconId":"default","position":{"mobile":"bottom-right","desktop":"bottom-right"},"language":{"default":"en","selected":[]}};var js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.src=u;js.async=true;fjs.parentNode.insertBefore(js,fjs);})(window,document,"script","https://cdn-cookieyes.com/widgets/accessibility.js?id=15a52046-1dc2-4123-abc2-6e809a8c3e84");</script>
+
+
 </body>
 </html>
