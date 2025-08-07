@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tobi Joshua Portfolio</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="https://ik.imagekit.io/experthivetutors/ChatGPT%20Image%20Aug%207,%202025,%2006_07_53%20AM.png?updatedAt=1754572188208" type="image/png" />
+
   <!-- Font Awesome CDN for icons -->
   <link
     rel="stylesheet"
@@ -42,6 +45,22 @@
       color: white;
       padding: 2rem 1rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header img.header-image {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      opacity: 0.3;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
     }
     header h1 {
       margin: 0.2rem 0;
@@ -68,10 +87,31 @@
     .about p {
       font-size: 1.1rem;
     }
+    .stacks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .stack-item {
+      background: white;
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      border: 2px solid #007acc;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+    }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
+    }
+    @media (max-width: 800px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
     }
     .project-card {
       background: white;
@@ -85,6 +125,7 @@
       overflow: hidden;
       cursor: pointer;
       user-select: none;
+      border: 2px solid #007acc;
     }
     .project-card:hover {
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
@@ -143,14 +184,6 @@
       border-top: 1px solid #ddd;
       margin-top: 3rem;
     }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      .projects {
-        grid-template-columns: 1fr;
-      }
-    }
     /* Modal styles for private repo message */
     #modal {
       position: fixed;
@@ -186,6 +219,7 @@
 </head>
 <body>
   <header>
+    <img src="https://ik.imagekit.io/experthivetutors/ChatGPT%20Image%20Aug%207,%202025,%2006_19_48%20AM.png?updatedAt=1754572813223" alt="Header Background" class="header-image" />
     <h1>Tobi Joshua Samuel</h1>
     <p>Data Scientist | Software Engineer | ML & Web Developer</p>
   </header>
@@ -194,10 +228,22 @@
     <section class="about">
       <h2>About Me</h2>
       <p>
-        Hi! I’m Tobi Joshua, a passionate Data Scientist and Software Engineer.
-        I work on machine learning, deep learning, web and mobile applications.
-        I enjoy building projects that make an impact.
+        Hi! I’m Tobi Joshua, a dedicated Data Scientist and Software Engineer with over 4 years of experience designing and deploying scalable machine learning models and web applications. I specialize in Python, Django, React, and cloud-native architectures. Passionate about transforming data into actionable insights, I enjoy collaborating with cross-functional teams to solve real-world problems, whether it’s predictive analytics, deep learning, or building robust APIs.
       </p>
+    </section>
+
+    <section class="stacks">
+      <h2>My Tech Stack</h2>
+      <div class="stack-item"><i class="fab fa-python"></i> Python</div>
+      <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
+      <div class="stack-item"><i class="fab fa-react"></i> React</div>
+      <div class="stack-item"><i class="fab fa-react"></i> React Native/Expo</div>
+      <div class="stack-item"><i class="fab fa-js-square"></i> JavaScript</div>
+        <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
+      <div class="stack-item"><i class="fab fa-aws"></i> AWS EC2</div>
+      <div class="stack-item"><i class="fas fa-cloud"></i> Cloudflare R2</div>
+      <div class="stack-item"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
+      <div class="stack-item"><i class="fas fa-server"></i> Django Rest API</div>
     </section>
 
     <section class="projects">
@@ -260,10 +306,13 @@
       </div>
     </section>
   </main>
+<footer>
+  &copy; <span id="year"></span> Tobi Joshua Samuel
+</footer>
 
-  <footer>
-    &copy; 2025 Tobi Joshua Samuel
-  </footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
   <!-- Modal for private repo message -->
   <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
@@ -281,7 +330,7 @@
     // Show modal
     function showModal() {
       modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // prevent scroll
+      document.body.style.overflow = 'hidden';
       closeModalBtn.focus();
     }
 
@@ -298,7 +347,7 @@
 
     // Attach party.js confetti and private repo check on project cards & links
     document.querySelectorAll('.project-card, .project-links a, .social-links a').forEach(elem => {
-      elem.style.position = 'relative'; // for confetti absolute positioning
+      elem.style.position = 'relative';
 
       elem.addEventListener('click', event => {
         event.preventDefault();
@@ -317,12 +366,10 @@
           const isPrivate = card.getAttribute('data-private') === 'true';
 
           if (isPrivate) {
-            // Show modal
             showModal();
             return;
           }
 
-          // If clicking a link in public repo, open link normally
           if (event.target.closest('a') && event.target.closest('a').href) {
             const link = event.target.closest('a').href;
             window.open(link, '_blank', 'noopener');
@@ -332,7 +379,7 @@
       });
     });
 
-    // Accessibility: Allow keyboard users to "click" cards with Enter or Space
+    // Accessibility: keyboard support
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') {
