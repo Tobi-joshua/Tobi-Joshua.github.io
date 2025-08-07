@@ -87,14 +87,17 @@
     .about p {
       font-size: 1.1rem;
     }
-.stacks {
+
+    .stacks {
   margin: 3rem 0;
   padding: 0 1rem;
 }
 
 .stacks h2 {
   margin-bottom: 2rem;
-  text-align: center;
+  font-size: 1.8rem;
+  /* Removed center alignment */
+  text-align: left;
 }
 
 .stack-category {
@@ -105,7 +108,7 @@
   margin-bottom: 1rem;
   font-size: 1.3rem;
   color: #007acc;
-  text-align: center;
+  text-align: center; /* This remains centered */
 }
 
 .stack-items {
@@ -132,6 +135,7 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
+
 
    .projects {
   display: flex;
@@ -341,7 +345,7 @@
 
 <section class="stacks">
   <h2>My Tech Stack</h2>
-  
+
   <div class="stack-category">
     <h3>Frontend</h3>
     <div class="stack-items">
@@ -361,6 +365,8 @@
       <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
       <div class="stack-item"><i class="fas fa-fire"></i> Firebase / Firestore</div>
       <div class="stack-item"><i class="fas fa-code"></i> Cloud Functions</div>
+      <div class="stack-item"><i class="fas fa-bolt"></i> WebSocket</div>
+      <div class="stack-item"><i class="fas fa-memory"></i> Redis</div>
     </div>
   </div>
 
@@ -371,9 +377,12 @@
       <div class="stack-item"><i class="fas fa-cloud"></i> Cloudflare R2</div>
       <div class="stack-item"><i class="fas fa-clock"></i> Google Cloud Scheduler</div>
       <div class="stack-item"><i class="fas fa-tasks"></i> Task Queue (Crons)</div>
+      <div class="stack-item"><i class="fas fa-image"></i> ImageKit</div>
+      <div class="stack-item"><i class="fas fa-cloud-upload-alt"></i> Cloudinary</div>
     </div>
   </div>
 </section>
+
 
 
     
