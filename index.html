@@ -87,16 +87,27 @@
     .about p {
       font-size: 1.1rem;
     }
-    .stacks {
-  margin: 3rem 0; /* adds space above and below */
+.stacks {
+  margin: 3rem 0;
+  padding: 0 1rem;
 }
 
 .stacks h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-  /* no text-align or color change here */
+  margin-bottom: 2rem;
+  text-align: center;
 }
-    
+
+.stack-category {
+  margin-bottom: 2.5rem;
+}
+
+.stack-category h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #007acc;
+  text-align: center;
+}
+
 .stack-items {
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +128,6 @@
   transition: transform 0.2s ease;
 }
 
-/* Optional: slight hover effect for polish */
 .stack-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -142,7 +152,7 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   padding: 1rem;
   align-items: center;
-  min-height: 140px; /* prevent too small */
+  min-height: 140px; 
 }
 
 .project-card:hover,
@@ -331,19 +341,40 @@
 
 <section class="stacks">
   <h2>My Tech Stack</h2>
-  <div class="stack-items">
-    <div class="stack-item"><i class="fab fa-python"></i> Python</div>
-    <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
-    <div class="stack-item"><i class="fab fa-react"></i> React</div>
-    <div class="stack-item"><i class="fab fa-react"></i> React Native / Expo</div>
-    <div class="stack-item"><i class="fab fa-js-square"></i> JavaScript</div>
-    <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
-    <div class="stack-item"><i class="fab fa-aws"></i> AWS EC2</div>
-    <div class="stack-item"><i class="fas fa-cloud"></i> Cloudflare R2</div>
-    <div class="stack-item"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
-    <div class="stack-item"><i class="fas fa-server"></i> Django Rest API</div>
+  
+  <div class="stack-category">
+    <h3>Frontend</h3>
+    <div class="stack-items">
+      <div class="stack-item"><i class="fab fa-react"></i> React</div>
+      <div class="stack-item"><i class="fab fa-react"></i> React Native / Expo</div>
+      <div class="stack-item"><i class="fab fa-js-square"></i> JavaScript</div>
+      <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
+      <div class="stack-item"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
+    </div>
+  </div>
+
+  <div class="stack-category">
+    <h3>Backend</h3>
+    <div class="stack-items">
+      <div class="stack-item"><i class="fab fa-python"></i> Python</div>
+      <div class="stack-item"><i class="fas fa-server"></i> Django Rest API</div>
+      <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
+      <div class="stack-item"><i class="fas fa-fire"></i> Firebase / Firestore</div>
+      <div class="stack-item"><i class="fas fa-code"></i> Cloud Functions</div>
+    </div>
+  </div>
+
+  <div class="stack-category">
+    <h3>Cloud & DevOps</h3>
+    <div class="stack-items">
+      <div class="stack-item"><i class="fab fa-aws"></i> AWS EC2</div>
+      <div class="stack-item"><i class="fas fa-cloud"></i> Cloudflare R2</div>
+      <div class="stack-item"><i class="fas fa-clock"></i> Google Cloud Scheduler</div>
+      <div class="stack-item"><i class="fas fa-tasks"></i> Task Queue (Crons)</div>
+    </div>
   </div>
 </section>
+
 
     
     <section class="projects">
