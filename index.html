@@ -104,67 +104,61 @@
       box-shadow: 0 2px 7px rgba(0,0,0,0.1);
     }
     .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-direction: column;
       gap: 1.5rem;
     }
-    .projects > h2 + * {
-  margin-top: 1rem; 
-}
-
-    @media (max-width: 800px) {
-      .projects {
-        grid-template-columns: 1fr;
-      }
-    }
     .project-card {
-      background: white;
-      border-radius: 6px;
-      box-shadow: 0 2px 7px rgba(0,0,0,0.1);
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      gap: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
       cursor: pointer;
       user-select: none;
-      border: 2px solid #007acc;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      padding: 1rem;
+      align-items: center;
     }
-    .project-card:hover {
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    .project-card:hover,
+    .project-card:focus {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transform: translateY(-5px);
+      outline: none;
     }
     .project-header-image {
-      width: 100%;
-      height: 140px;
+      width: 180px;
+      height: 120px;
       object-fit: cover;
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
+      border-radius: 8px;
+      flex-shrink: 0;
     }
     .project-content {
-      padding: 1rem;
-      flex-grow: 1;
+      flex: 1;
       display: flex;
       flex-direction: column;
     }
-    .project-card h3 {
+    .project-content h3 {
       margin: 0 0 0.5rem 0;
     }
-    .project-card p {
-      flex-grow: 1;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
+    .project-content p {
       color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .project-links {
+      margin-top: auto;
     }
     .project-links a {
       margin-right: 1rem;
       font-size: 1.3rem;
       color: #007acc;
       transition: color 0.3s ease;
-      position: relative;
     }
-    .project-links a:hover {
+    .project-links a:hover,
+    .project-links a:focus {
       color: #004d99;
+      outline: none;
     }
     .contact p {
       font-size: 1rem;
@@ -244,7 +238,7 @@
       <div class="stack-item"><i class="fab fa-react"></i> React</div>
       <div class="stack-item"><i class="fab fa-reactnative"></i> React Native/Expo</div>
       <div class="stack-item"><i class="fab fa-js-square"></i> JavaScript</div>
-        <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
+      <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
       <div class="stack-item"><i class="fab fa-aws"></i> AWS EC2</div>
       <div class="stack-item"><i class="fas fa-cloud"></i> Cloudflare R2</div>
       <div class="stack-item"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
@@ -253,10 +247,15 @@
 
     <section class="projects">
       <h2>Projects</h2>
-<br/><br/>
-      
-      <!-- Private repo example -->
-       <a href="project.html?id=1" class="project-card" tabindex="0" role="button" aria-pressed="false" data-private="false">
+
+      <div
+        class="project-card"
+        tabindex="0"
+        role="button"
+        aria-pressed="false"
+        data-private="false"
+        data-link="project.html?id=1"
+      >
         <img
           src="https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959"
           alt="React Frontend Project"
@@ -264,27 +263,31 @@
         />
         <div class="project-content">
           <h3>React Frontend for Expert Hive Tutors Website</h3>
-         <p>
-  A responsive React app integrated with Django backend APIs for an online tutoring marketplace.
-  <strong>Expert Hive Tutors</strong> is a web-based EdTech platform designed to connect students with verified expert tutors for real-time academic support through question posting. 
-  Students can upload questions, receive accurate solutions, and buy or sell study materials. 
-  The platform emphasizes secure transactions, tutor accountability, and compliance with Nigerian education standards — delivering a seamless and trustworthy academic assistance experience.
-</p>
-
+          <p>
+            A responsive React app integrated with Django backend APIs for an online tutoring marketplace.
+            <strong>Expert Hive Tutors</strong> is a web-based EdTech platform designed to connect students with verified expert tutors for real-time academic support through question posting.
+            Students can upload questions, receive accurate solutions, and buy or sell study materials.
+            The platform emphasizes secure transactions, tutor accountability, and compliance with Nigerian education standards — delivering a seamless and trustworthy academic assistance experience.
+          </p>
           <div class="project-links">
-            <a  href="#" title="Request Access" aria-label="Request Access">
+            <a href="#" title="GitHub Repo" aria-label="GitHub Repo">
               <i class="fab fa-github"></i>
             </a>
-            <a  href="#" title="Request Access" aria-label="Request Access">
+            <a href="#" title="Live Demo" aria-label="Live Demo">
               <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
         </div>
       </div>
-       </a>
-      
-      <!-- Private repo example -->
-       <a href="project.html?id=2" class="project-card" tabindex="0" role="button" aria-pressed="false" data-private="false">
+
+      <div
+        class="project-card"
+        tabindex="0"
+        role="button"
+        aria-pressed="false"
+        data-private="true"
+        data-link="project.html?id=2"
+      >
         <img
           src="https://user-images.githubusercontent.com/123456/your-private-project-image.png"
           alt="Private Django REST API Project"
@@ -294,42 +297,40 @@
           <h3>Python Django REST API</h3>
           <p>This backend API is private. Please email for access.</p>
           <div class="project-links">
-            <!-- No direct GitHub link for private repo -->
-            <a href="#" title="Request Access" aria-label="Request Access">
+            <a href="mailto:info@experthivetutors.com" title="Request Access" aria-label="Request Access">
               <i class="fas fa-envelope"></i>
             </a>
           </div>
         </div>
       </div>
-       </a>
     </section>
 
     <section class="contact">
       <h2>Contact</h2>
       <p>Feel free to reach out via email or connect on LinkedIn and GitHub.</p>
-     <div class="social-links">
-  <a href="mailto:tobilobasam3@gmail.com" title="Email" aria-label="Email">
-    <i class="fas fa-envelope"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/tobi-joshua-aaa08a191/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
-    <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://github.com/Tobi-joshua" target="_blank" title="GitHub" aria-label="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://x.com/TobiJoshua123" target="_blank" title="Twitter" aria-label="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-</div>
+      <div class="social-links">
+        <a href="mailto:tobilobasam3@gmail.com" title="Email" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tobi-joshua-aaa08a191/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Tobi-joshua" target="_blank" title="GitHub" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://x.com/TobiJoshua123" target="_blank" title="Twitter" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
     </section>
   </main>
-<footer>
-  &copy; <span id="year"></span> Tobi Joshua Samuel
-</footer>
+  <footer>
+    &copy; <span id="year"></span> Tobi Joshua Samuel
+  </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
   <!-- Modal for private repo message -->
   <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
@@ -362,42 +363,34 @@
       if(e.target === modal) hideModal();
     });
 
-    // Attach party.js confetti and private repo check on project cards & links
-    document.querySelectorAll('.project-card, .project-links a, .social-links a').forEach(elem => {
-      elem.style.position = 'relative';
-
-      elem.addEventListener('click', event => {
-        event.preventDefault();
-
-        // Trigger confetti at click location
-        party.confetti(event.target, {
+    // Attach click handlers to project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', (event) => {
+        // Prevent default if clicked on link inside card
+        if (event.target.closest('a')) {
+          return;
+        }
+        // Trigger party.js confetti at click position
+        party.confetti(event.currentTarget, {
           count: party.variation.range(20, 40),
           spread: 70,
           speed: 500,
           size: 1.5
         });
 
-        // Special logic for private repo cards
-        const card = event.target.closest('.project-card');
-        if (card) {
-          const isPrivate = card.getAttribute('data-private') === 'true';
+        const isPrivate = card.getAttribute('data-private') === 'true';
+        if (isPrivate) {
+          showModal();
+          return;
+        }
 
-          if (isPrivate) {
-            showModal();
-            return;
-          }
-
-          if (event.target.closest('a') && event.target.closest('a').href) {
-            const link = event.target.closest('a').href;
-            window.open(link, '_blank', 'noopener');
-            return;
-          }
+        const link = card.getAttribute('data-link');
+        if (link) {
+          window.location.href = link;
         }
       });
-    });
 
-    // Accessibility: keyboard support
-    document.querySelectorAll('.project-card').forEach(card => {
+      // Keyboard support: open on Enter or Space
       card.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -406,9 +399,8 @@
       });
     });
   </script>
-  	
-<script>(function(w,d,s,u,o){w._cyA11yConfig={"iconId":"default","position":{"mobile":"bottom-right","desktop":"bottom-right"},"language":{"default":"en","selected":[]}};var js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.src=u;js.async=true;fjs.parentNode.insertBefore(js,fjs);})(window,document,"script","https://cdn-cookieyes.com/widgets/accessibility.js?id=15a52046-1dc2-4123-abc2-6e809a8c3e84");</script>
 
+  <script>(function(w,d,s,u,o){w._cyA11yConfig={"iconId":"default","position":{"mobile":"bottom-right","desktop":"bottom-right"},"language":{"default":"en","selected":[]}};var js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.src=u;js.async=true;fjs.parentNode.insertBefore(js,fjs);})(window,document,"script","https://cdn-cookieyes.com/widgets/accessibility.js?id=15a52046-1dc2-4123-abc2-6e809a8c3e84");</script>
 
 </body>
 </html>
