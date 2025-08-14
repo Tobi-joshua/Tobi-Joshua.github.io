@@ -422,6 +422,58 @@ Ideal for developers and designers who want to quickly add polished animated tex
   ],
   private: false
 },
+
+"6": {
+  title: "🏆 Hackathon Data Quest: The Stack Overflow Treasure Hunt (BigQuery AI)",
+  images: [
+    {
+      src: "https://ik.imagekit.io/ooiob6xdv/AI-Powered%20Developer%20Helpdesk1755041295.jpg?updatedAt=1755169343431",
+      title: "AI-Powered Developer Helpdesk Pipeline Overview"
+    },
+    {
+      src: "https://www.kaggleusercontent.com/kf/255884223/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..alsxQ6M0E_F7f50FLN1T5Q.yF_3w7JVUtLDtvuYPfSeiI1QcQb7OTtQMO-d_dYI0_fBE-BZoDiuehlPbZIoZ0m1BEn3OlkQW8aZq2hD0p-ukUERkpGbeWJrXCf-IJhFaXdUmR4qxK_dbIyjfVB1_WkRubJKHD3MdC19fthWykj6WLvQJrB4u4xU-QcxHUBSdrunqK9_dOSZxPllLZusTD5wCIZBN2zd7WMCJyJl6Ty46GZHkhX5xsN5dxf1bJIj7_1i17ABqS8F4PL6Bw00Uy7FOauk0nEeDKlVmbaCT3hFrlVyW3AWl2ORYcSCjA6kJD5F2nDu_14baJ_RBVCrQ4j2oOKlwrKqbq3X1oumZi9pgTK1LtBGGfQkEwPJRISvrPEvSvLZDMKmDTrSKxNp0gr6hMuek09ow2Y2rwBA-r4NK0DNjUHo-sWSSVRIPR571UhtfpOGpr5g9OFlRQuzF4Ll30JDsrbZ0WeMBL99-Ux76XmljEhd5bSDE71FJu51aGY8nVoTu32fA8YHf-ZXdB8P7AvsuGGlzn0x4exLA4gRCBtQqiCbbI7GGl47lPkvk0hEphrRPjq9kigkuhBt4CTxzxuyF8gyWonmHi_n3aC-xNUByY7DDV1-ZBMcf3n73BwJkDuxQZtUonG5nhfOOxW19iZZkDe28xl1FeRz1CXxvQ.dMR_xWrp56gzIU6nsrzrWg/__results___files/__results___39_0.png",
+      title: "t-SNE Semantic Cluster Visualization"
+    },
+    {
+      src: "https://ik.imagekit.io/ooiob6xdv/Semantic%20Search%20_%20Asking%20the%20Oracle.png?updatedAt=1755169997766",
+      title: "Semantic Search Query Matching"
+    },
+    {
+      src: "https://ik.imagekit.io/ooiob6xdv/summarizations.png?updatedAt=1755169997825",
+      title: "AI Summarization — Making the Scrolls Shorter"
+    },
+    {
+      src: "https://ik.imagekit.io/ooiob6xdv/Embedding.png?updatedAt=1755169997881",
+      title: "Embeddings — Turning Words into Math"
+    },
+  ],
+  description: `Built as a **BigQuery AI Hackathon 2025** competition entry, this project delivers an **AI-powered developer helpdesk** that transforms noisy Stack Overflow posts into a **searchable, summarized, and semantically indexed knowledge base**.
+
+The production-minded pipeline includes:
+- **Summarization** — one-line question summaries via \`AI.GENERATE\`.
+- **Embeddings** — vector embeddings from Vertex AI, integrated as a BigQuery remote model.
+- **Semantic Search** — cosine similarity scoring for instant retrieval.
+- **Visualization** — interactive t-SNE plots (Plotly) to explore semantic clusters.
+- **Exports** — CSVs with presentation-friendly headers (*Developer Questions*, *AI Helpdesk Response*) for judges.
+
+**Key Results / Artifacts**
+- \`question_summaries\` table — concise AI-generated summaries.
+- \`question_embeddings\` table — embeddings stored in BigQuery.
+- \`semantic_search_no_index()\` — vector search without native indexing.
+- Interactive cluster visualizations for exploratory analysis.
+- Sample CSV outputs (\`preview_rows.csv\`, \`sample_summaries_nice.csv\`) for demo judging.
+
+**Cost & Practical Notes**
+- Limited exports to 20 questions to control BigQuery/Vertex AI costs during development.
+- Used on-the-fly scoring due to vector indexing limitations with remote models.
+- Designed with a clear path to production scalability using native BigQuery ML embeddings.`,
+  links: [
+    { href: "https://www.kaggle.com/code/tobijoshua/ai-developer-help-desk-q-a", label: "View Kaggle Notebook" },
+    { href: "https://www.kaggle.com/competitions/bigquery-ai-hackathon", label: "Competition Page" }
+  ],
+  private: false
+},
+      
     };
 
     const project = projects[id];
