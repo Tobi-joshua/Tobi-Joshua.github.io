@@ -14,6 +14,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   
   <!-- party.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
@@ -500,7 +501,8 @@ The production-minded pipeline includes:
       });
 
       // Description
-document.getElementById("description").innerHTML = project.description;
+      document.getElementById("description").innerHTML = marked.parse(project.description);
+
 
 
       // Links
