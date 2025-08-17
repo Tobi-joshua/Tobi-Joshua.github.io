@@ -501,7 +501,14 @@ The production-minded pipeline includes:
       });
 
       // Description
-      document.getElementById("description").innerHTML = marked.parse(project.description);
+    if (project.description.trim().startsWith("<")) {
+  // Already HTML
+  document.getElementById("description").innerHTML = project.description;
+} else {
+  // Markdown
+  document.getElementById("description").innerHTML = marked.parse(project.description);
+}
+
 
 
 
