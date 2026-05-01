@@ -15,7 +15,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  
+
   <!-- party.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
 
@@ -89,174 +89,185 @@
     }
 
     .stacks {
-  margin: 3rem 0;
-  padding: 0 1rem;
-}
+      margin: 3rem 0;
+      padding: 0 1rem;
+    }
 
-.stacks h2 {
-  margin-bottom: 2rem;
-  text-align: left;
-  font-size:1.4rem;
-}
+    .stacks h2 {
+      margin-bottom: 2rem;
+      text-align: left;
+      font-size: 1.4rem;
+    }
 
-.stack-category {
-  margin-bottom: 2.5rem;
-}
+    .stack-category {
+      margin-bottom: 2.5rem;
+    }
 
-.stack-category h3 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  color: #007acc;
-  text-align: center; /* This remains centered */
-}
+    .stack-category h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #007acc;
+      text-align: center;
+    }
 
-.stack-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
+    .stack-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
 
-.stack-item {
-  background-color: #f9f9f9;
-  padding: 0.6rem 1.1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #333;
-  transition: transform 0.2s ease;
-}
+    .stack-item {
+      background-color: #f9f9f9;
+      padding: 0.6rem 1.1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #333;
+      transition: transform 0.2s ease;
+    }
 
-.stack-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
+    .stack-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
 
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-   .projects {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 0 1rem;
-}
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .project-status {
+      padding: 3px 8px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-radius: 4px;
+      color: white;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
 
-.project-status {
-  padding: 3px 8px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 4px;
-  color: white;
-  text-transform: uppercase;
-}
+    .project-status.completed {
+      background-color: #28a745;
+    }
 
-.project-status.completed {
-  background-color: #28a745; /* Green */
-}
+    .project-status.ongoing {
+      background-color: #ffc107;
+    }
 
-.project-status.ongoing {
-  background-color: #ffc107; /* Amber */
-}
-/* Project card base styles */
-.project-card {
-  display: flex;
-  gap: 1rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-  cursor: pointer;
-  user-select: none;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  padding: 1rem;
-  align-items: center;
-  min-height: 140px; 
-}
+    .project-card {
+      display: flex;
+      gap: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      cursor: pointer;
+      user-select: none;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      padding: 1rem;
+      align-items: center;
+      min-height: 140px;
+    }
 
-.project-card:hover,
-.project-card:focus {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transform: translateY(-5px);
-  outline: none;
-}
+    .project-card:hover,
+    .project-card:focus {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transform: translateY(-5px);
+      outline: none;
+    }
 
-.project-header-image {
-  width: 180px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
+    .project-header-image {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+      background: #eef3f8;
+    }
 
-.project-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+    .project-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
-.project-content h3 {
-  margin: 0 0 0.5rem 0;
-  word-break: break-word;
-}
+    .project-content h3 {
+      margin: 0 0 0.5rem 0;
+      word-break: break-word;
+    }
 
-.project-content p {
-  color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  word-break: break-word;
-}
+    .project-content p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      word-break: break-word;
+    }
 
-.project-links {
-  margin-top: auto;
-}
+    .project-content ul {
+      margin: 0 0 0.75rem 1.2rem;
+      color: #555;
+      padding-left: 0.3rem;
+    }
 
-.project-links a {
-  margin-right: 1rem;
-  font-size: 1.3rem;
-  color: #007acc;
-  transition: color 0.3s ease;
-}
+    .project-content li {
+      margin-bottom: 0.3rem;
+    }
 
-.project-links a:hover,
-.project-links a:focus {
-  color: #004d99;
-  outline: none;
-}
+    .project-links {
+      margin-top: auto;
+    }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-  .project-card {
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: auto;
-  }
+    .project-links a {
+      margin-right: 1rem;
+      font-size: 1.3rem;
+      color: #007acc;
+      transition: color 0.3s ease;
+    }
 
-  .project-header-image {
-    width: 100%;
-    max-height: 200px;
-    height: auto;
-    border-radius: 8px 8px 0 0;
-  }
+    .project-links a:hover,
+    .project-links a:focus {
+      color: #004d99;
+      outline: none;
+    }
 
-  .project-content {
-    width: 100%;
-  }
+    @media (max-width: 600px) {
+      .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: auto;
+      }
 
-  .project-content h3,
-  .project-content p {
-    margin-left: 0;
-  }
+      .project-header-image {
+        width: 100%;
+        max-height: 200px;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+      }
 
-  .project-links {
-    margin-top: 1rem;
-  }
-}
+      .project-content {
+        width: 100%;
+      }
+
+      .project-content h3,
+      .project-content p {
+        margin-left: 0;
+      }
+
+      .project-links {
+        margin-top: 1rem;
+      }
+    }
+
     .contact p {
       font-size: 1rem;
     }
@@ -280,7 +291,6 @@
       margin-top: 3rem;
     }
 
-    
     #modal {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -311,61 +321,60 @@
     #modal button:hover {
       background: #005f99;
     }
-/* Visually hidden label for accessibility */
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
 
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-  padding: 0 1rem;
-}
+    .visually-hidden {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
 
-#searchInput {
-  width: 100%;
-  max-width: 500px;
-  padding: 0.75rem 1.25rem;
-  font-size: 1rem;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+      padding: 0 1rem;
+    }
 
-#searchInput:focus {
-  outline: none;
-  border-color: #007acc;
-  box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.2);
-}
+    #searchInput {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.view-all-container {
-  text-align: center;
-  margin-top: 30px;
-}
+    #searchInput:focus {
+      outline: none;
+      border-color: #007acc;
+      box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.2);
+    }
 
-.view-all-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #6a0dad; 
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
+    .view-all-container {
+      text-align: center;
+      margin-top: 30px;
+    }
 
-.view-all-button:hover {
-  background-color: #5a009c; 
-}
+    .view-all-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #6a0dad;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
 
+    .view-all-button:hover {
+      background-color: #5a009c;
+    }
   </style>
 </head>
 <body>
@@ -376,269 +385,310 @@
   </header>
 
   <main>
-   <section class="about">
-  <h2>About Me</h2>
-  <p>
-    Hi! I’m <strong>Tobi Joshua</strong>, a dedicated <strong>Data Scientist</strong> and <strong>Software Engineer</strong> with over 4 years of hands-on experience in designing, developing, and deploying scalable <strong>machine learning models</strong> and <strong>full-stack web applications</strong>. My expertise lies in <strong>Python, Django, React, PostgreSQL, and cloud-native architectures</strong>, and I thrive at the intersection of data, software, and business strategy.
-  </p>
-  <p>
-    Over the years, I’ve built solutions ranging from <strong>predictive analytics systems</strong> and <strong>deep learning pipelines</strong> to <strong>enterprise-grade APIs</strong> and <strong>client-facing platforms</strong>. I am passionate about transforming raw data into actionable insights, crafting clean, efficient code, and delivering user-focused products that solve real-world problems.
-  </p>
-  <p>
-    Beyond the technical side, I enjoy <strong>collaborating with cross-functional teams</strong>, mentoring junior developers, and driving projects from concept to deployment. I’m particularly interested in projects that combine <strong>data-driven decision making</strong>, <strong>fintech innovation</strong>, and <strong>scalable web applications</strong>.
-  </p>
-  <p>
-    When I’m not coding, you’ll find me exploring emerging AI technologies, contributing to open-source projects, or sharing knowledge with the developer community. My goal is simple: to keep learning, build impactful products, and help organizations unlock the full potential of their data.
-  </p>
-</section>
-
-<section class="stacks">
-  <h2>My Tech Stack</h2>
-
-  <div class="stack-category">
-    <h3>Frontend</h3>
-    <div class="stack-items">
-      <div class="stack-item"><i class="fab fa-react"></i> React</div>
-      <div class="stack-item"><i class="fab fa-react"></i> React Native / Expo</div>
-      <div class="stack-item"><i class="fab fa-js-square"></i> JavaScript</div>
-      <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
-      <div class="stack-item"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
-    </div>
-  </div>
-
-  <div class="stack-category">
-    <h3>Backend</h3>
-    <div class="stack-items">
-      <div class="stack-item"><i class="fab fa-python"></i> Python</div>
-      <div class="stack-item"><i class="fas fa-server"></i> Django Rest API</div>
-      <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
-      <div class="stack-item"><i class="fas fa-fire"></i> Firebase / Firestore</div>
-      <div class="stack-item"><i class="fas fa-code"></i> Cloud Functions</div>
-      <div class="stack-item"><i class="fas fa-bolt"></i> WebSocket / Chat Rooms</div>
-      <div class="stack-item"><i class="fas fa-memory"></i> Redis</div>
-    </div>
-  </div>
-
-  <div class="stack-category">
-    <h3>AI & Data Science</h3>
-    <div class="stack-items">
-      <div class="stack-item"><i class="fas fa-robot"></i> Large Language Models (LLMs)</div>
-      <div class="stack-item"><i class="fas fa-brain"></i> AI Agents</div>
-      <div class="stack-item"><i class="fas fa-project-diagram"></i> Deep Learning</div>
-      <div class="stack-item"><i class="fas fa-magic"></i> Automation & Action Chains</div>
-      <div class="stack-item"><i class="fas fa-chart-bar"></i> Tableau</div>
-      <div class="stack-item"><i class="fas fa-chart-line"></i> R</div>
-      <div class="stack-item"><i class="fas fa-square-root-alt"></i> MATLAB</div>
-    </div>
-  </div>
-
-  <div class="stack-category">
-    <h3>Cloud & DevOps</h3>
-    <div class="stack-items">
-      <div class="stack-item"><i class="fab fa-aws"></i> AWS EC2</div>
-      <div class="stack-item"><i class="fas fa-cloud"></i> Cloudflare R2</div>
-      <div class="stack-item"><i class="fas fa-clock"></i> Google Cloud Scheduler</div>
-      <div class="stack-item"><i class="fas fa-tasks"></i> Task Queue (Crons)</div>
-      <div class="stack-item"><i class="fas fa-image"></i> ImageKit</div>
-      <div class="stack-item"><i class="fas fa-cloud-upload-alt"></i> Cloudinary</div>
-      <div class="stack-item"><i class="fab fa-docker"></i> Docker</div>
-    </div>
-  </div>
-</section>
-
- <section class="projects">
-  <h2>Projects</h2>
-
-  <section class="search-container">
-    <label for="searchInput" class="visually-hidden">Search Projects</label>
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Search projects..."
-      aria-label="Search Projects"
-    />
-  </section>
-
-  <div
-    class="project-card"
-    tabindex="0"
-    role="button"
-    aria-pressed="false"
-    data-private="false"
-    data-link="project.html?id=1"
-  >
-    <img
-      src="https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959"
-      alt="React Frontend Project"
-      class="project-header-image"
-    />
-    <div class="project-content">
-      <div class="project-header">
-        <h3>React Frontend for Expert Hive Tutors Website</h3>
-        <span class="project-status completed">Completed</span>
-      </div>
+    <section class="about">
+      <h2>About Me</h2>
       <p>
-        A responsive React app integrated with Django backend APIs for an online tutoring marketplace.
-        <strong>Expert Hive Tutors</strong> is a web-based EdTech platform designed to connect students with verified expert tutors for real-time academic support through question posting.
-        Students can upload questions, receive accurate solutions, and buy or sell study materials.
-        The platform emphasizes secure transactions, tutor accountability, and compliance with Nigerian education standards — delivering a seamless and trustworthy academic assistance experience.
+        Hi! I’m <strong>Tobi Joshua</strong>, a dedicated <strong>Data Scientist</strong> and <strong>Software Engineer</strong> with over 4 years of hands-on experience in designing, developing, and deploying scalable <strong>machine learning models</strong> and <strong>full-stack web applications</strong>. My expertise lies in <strong>Python, Django, React, PostgreSQL, and cloud-native architectures</strong>, and I thrive at the intersection of data, software, and business strategy.
       </p>
-      <div class="project-links">
-        <a href="#" class="private-link" title="GitHub (Private)" aria-label="GitHub (Private)">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="#" class="private-link" title="Live Demo (Private)" aria-label="Live Demo (Private)">
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div
-    class="project-card"
-    tabindex="0"
-    role="button"
-    aria-pressed="false"
-    data-private="false"
-    data-link="project.html?id=2"
-  >
-    <img
-      src="https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741"
-      alt="Expert Hive Tutors Django REST API"
-      class="project-header-image"
-    />
-    <div class="project-content">
-      <div class="project-header">
-        <h3>Expert Hive Tutors – Django REST API 🐝📚</h3>
-        <span class="project-status completed">Completed</span>
-      </div>
       <p>
-        This repository contains the API backend for the <strong>Expert Hive Tutors</strong> platform, built using Django and Django REST Framework (DRF). It enables core functionality like managing client-posted questions and notifying tutors via email and push messages.
+        Over the years, I’ve built solutions ranging from <strong>predictive analytics systems</strong> and <strong>deep learning pipelines</strong> to <strong>enterprise-grade APIs</strong> and <strong>client-facing platforms</strong>. I am passionate about transforming raw data into actionable insights, crafting clean, efficient code, and delivering user-focused products that solve real-world problems.
       </p>
-      <ul>
-        <li>📌 Manage student questions (create, retrieve, update)</li>
-        <li>📬 Email + SMS notifications to tutors</li>
-      </ul>
-      <p><strong>🔗 Sample API Endpoints:</strong></p>
-      <ul>
-        <li>✅ <strong>GET /questions/{pk}</strong>: Retrieve details of a question</li>
-        <li>✅ <strong>POST /questions/{pk}</strong>: Edit question and notify tutors</li>
-      </ul>
-      <div class="project-links">
-        <a href="https://github.com/Tobi-joshua/Expert-Hive-Tutors-API" title="View GitHub Repo" aria-label="GitHub Repo">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.experthivetutors.com/expert-hive-api-type1/" title="Live API Demo" aria-label="Live API Demo">
-          <i class="fas fa-external-link-alt"></i>
+      <p>
+        Beyond the technical side, I enjoy <strong>collaborating with cross-functional teams</strong>, mentoring junior developers, and driving projects from concept to deployment. I’m particularly interested in projects that combine <strong>data-driven decision making</strong>, <strong>fintech innovation</strong>, and <strong>scalable web applications</strong>.
+      </p>
+      <p>
+        When I’m not coding, you’ll find me exploring emerging AI technologies, contributing to open-source projects, or sharing knowledge with the developer community. My goal is simple: to keep learning, build impactful products, and help organizations unlock the full potential of their data.
+      </p>
+    </section>
+
+    <section class="stacks">
+      <h2>My Tech Stack</h2>
+
+      <div class="stack-category">
+        <h3>Frontend</h3>
+        <div class="stack-items">
+          <div class="stack-item"><i class="fab fa-react"></i> React</div>
+          <div class="stack-item"><i class="fab fa-react"></i> React Native / Expo</div>
+          <div class="stack-item"><i class="fab fa-js-square"></i> JavaScript</div>
+          <div class="stack-item"><i class="fab fa-js-square"></i> TypeScript</div>
+          <div class="stack-item"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
+        </div>
+      </div>
+
+      <div class="stack-category">
+        <h3>Backend</h3>
+        <div class="stack-items">
+          <div class="stack-item"><i class="fab fa-python"></i> Python</div>
+          <div class="stack-item"><i class="fas fa-server"></i> Django REST API</div>
+          <div class="stack-item"><i class="fas fa-database"></i> PostgreSQL</div>
+          <div class="stack-item"><i class="fas fa-fire"></i> Firebase / Firestore</div>
+          <div class="stack-item"><i class="fas fa-code"></i> Cloud Functions</div>
+          <div class="stack-item"><i class="fas fa-bolt"></i> WebSocket / Chat Rooms</div>
+          <div class="stack-item"><i class="fas fa-memory"></i> Redis</div>
+        </div>
+      </div>
+
+      <div class="stack-category">
+        <h3>AI & Data Science</h3>
+        <div class="stack-items">
+          <div class="stack-item"><i class="fas fa-robot"></i> Large Language Models (LLMs)</div>
+          <div class="stack-item"><i class="fas fa-brain"></i> AI Agents</div>
+          <div class="stack-item"><i class="fas fa-project-diagram"></i> Deep Learning</div>
+          <div class="stack-item"><i class="fas fa-tags"></i> Data Annotation & Labeling</div>
+          <div class="stack-item"><i class="fas fa-shapes"></i> Feature Engineering</div>
+          <div class="stack-item"><i class="fas fa-search"></i> Semantic Search / Embeddings</div>
+          <div class="stack-item"><i class="fas fa-magic"></i> Prompt Engineering</div>
+          <div class="stack-item"><i class="fas fa-eye"></i> Explainable AI</div>
+          <div class="stack-item"><i class="fas fa-chart-bar"></i> Tableau</div>
+          <div class="stack-item"><i class="fas fa-chart-line"></i> R</div>
+          <div class="stack-item"><i class="fas fa-square-root-alt"></i> MATLAB</div>
+        </div>
+      </div>
+
+      <div class="stack-category">
+        <h3>Cloud & DevOps</h3>
+        <div class="stack-items">
+          <div class="stack-item"><i class="fab fa-aws"></i> AWS EC2</div>
+          <div class="stack-item"><i class="fas fa-cloud"></i> Cloudflare R2</div>
+          <div class="stack-item"><i class="fas fa-clock"></i> Google Cloud Scheduler</div>
+          <div class="stack-item"><i class="fas fa-tasks"></i> Task Queue (Crons)</div>
+          <div class="stack-item"><i class="fas fa-image"></i> ImageKit</div>
+          <div class="stack-item"><i class="fas fa-cloud-upload-alt"></i> Cloudinary</div>
+          <div class="stack-item"><i class="fab fa-docker"></i> Docker</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <section class="search-container">
+        <label for="searchInput" class="visually-hidden">Search Projects</label>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search projects..."
+          aria-label="Search Projects"
+        />
+      </section>
+
+      <div
+        class="project-card"
+        tabindex="0"
+        role="button"
+        aria-pressed="false"
+        data-private="false"
+        data-link="project.html?id=7"
+      >
+        <img
+          src="image.png"
+          alt="Spam Detection AI Project"
+          class="project-header-image"
+        />
+        <div class="project-content">
+          <div class="project-header">
+            <h3>Spam Detection AI — NLP, Explainable ML & Interactive Inference System</h3>
+            <span class="project-status completed">Completed</span>
+          </div>
+          <p>
+            A production-style machine learning application for classifying SMS messages as Spam or Ham.
+            It combines text preprocessing, TF-IDF feature extraction, Logistic Regression, explainable AI,
+            and a Streamlit web interface for real-time prediction and batch CSV processing.
+          </p>
+          <ul>
+            <li>🧹 Text cleaning, tokenization, and preprocessing pipeline</li>
+            <li>🏷️ Data annotation and supervised labeling workflow</li>
+            <li>⚙️ TF-IDF features with unigrams and bigrams</li>
+            <li>📊 Confidence scores, threshold tuning, and prediction history</li>
+            <li>📁 Batch inference with automatic text-column detection</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/Tobi-joshua/Spam-Detection-AI" target="_blank" title="View GitHub Repo" aria-label="GitHub Repo">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://github.com/Tobi-joshua/Spam-Detection-AI" target="_blank" title="View Project" aria-label="Project Link">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="project-card"
+        tabindex="0"
+        role="button"
+        aria-pressed="false"
+        data-private="false"
+        data-link="project.html?id=1"
+      >
+        <img
+          src="https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959"
+          alt="React Frontend Project"
+          class="project-header-image"
+        />
+        <div class="project-content">
+          <div class="project-header">
+            <h3>React Frontend for Expert Hive Tutors Website</h3>
+            <span class="project-status completed">Completed</span>
+          </div>
+          <p>
+            A responsive React app integrated with Django backend APIs for an online tutoring marketplace.
+            <strong>Expert Hive Tutors</strong> is a web-based EdTech platform designed to connect students with verified expert tutors for real-time academic support through question posting.
+            Students can upload questions, receive accurate solutions, and buy or sell study materials.
+            The platform emphasizes secure transactions, tutor accountability, and compliance with Nigerian education standards — delivering a seamless and trustworthy academic assistance experience.
+          </p>
+          <div class="project-links">
+            <a href="#" class="private-link" title="GitHub (Private)" aria-label="GitHub (Private)">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="private-link" title="Live Demo (Private)" aria-label="Live Demo (Private)">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="project-card"
+        tabindex="0"
+        role="button"
+        aria-pressed="false"
+        data-private="false"
+        data-link="project.html?id=2"
+      >
+        <img
+          src="https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741"
+          alt="Expert Hive Tutors Django REST API"
+          class="project-header-image"
+        />
+        <div class="project-content">
+          <div class="project-header">
+            <h3>Expert Hive Tutors – Django REST API 🐝📚</h3>
+            <span class="project-status completed">Completed</span>
+          </div>
+          <p>
+            This repository contains the API backend for the <strong>Expert Hive Tutors</strong> platform, built using Django and Django REST Framework (DRF). It enables core functionality like managing client-posted questions and notifying tutors via email and push messages.
+          </p>
+          <ul>
+            <li>📌 Manage student questions (create, retrieve, update)</li>
+            <li>📬 Email + SMS notifications to tutors</li>
+          </ul>
+          <p><strong>🔗 Sample API Endpoints:</strong></p>
+          <ul>
+            <li>✅ <strong>GET /questions/{pk}</strong>: Retrieve details of a question</li>
+            <li>✅ <strong>POST /questions/{pk}</strong>: Edit question and notify tutors</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/Tobi-joshua/Expert-Hive-Tutors-API" title="View GitHub Repo" aria-label="GitHub Repo" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.experthivetutors.com/expert-hive-api-type1/" title="Live API Demo" aria-label="Live API Demo" target="_blank">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="project-card"
+        tabindex="0"
+        role="button"
+        aria-pressed="false"
+        data-private="false"
+        data-link="project.html?id=3"
+      >
+        <img
+          src="https://ik.imagekit.io/experthivetutors/Screenshot_2025-08-07-12-38-35-009_com.experthivetutors.EHFS.jpg?updatedAt=1754574988667"
+          alt="Hive Tutors Mobile App"
+          class="project-header-image"
+        />
+        <div class="project-content">
+          <div class="project-header">
+            <h3>Hive Tutors Mobile App (Android/iOS) 📚</h3>
+            <span class="project-status completed">Completed</span>
+          </div>
+
+          <p>
+            A full-featured academic mobile app connecting students with expert tutors in real time. Combines <strong>Q&A, video courses, live classes</strong>, and <strong>study materials</strong> into a unified learning ecosystem.
+          </p>
+
+          <ul>
+            <li>✅ Real-time Q&A support system (Chegg-style)</li>
+            <li>🎥 Structured video course marketplace (Udemy-style)</li>
+            <li>🧑‍🏫 Live class scheduling (Zoom-style)</li>
+            <li>📚 Digital academic resource store</li>
+          </ul>
+
+          <p><strong>Click to view full documentation & features →</strong></p>
+
+          <div class="project-links">
+            <a href="#" class="private-link" title="GitHub (Private)" aria-label="GitHub (Private)">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="private-link" title="Live Demo (Private)" aria-label="Live Demo (Private)">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="project-card"
+        tabindex="0"
+        role="button"
+        aria-pressed="false"
+        data-private="false"
+        data-link="project.html?id=6"
+      >
+        <img
+          src="https://ik.imagekit.io/ooiob6xdv/AI-Powered%20Developer%20Helpdesk1755041295.jpg?updatedAt=1755169343431"
+          alt="Hackathon Data Quest: The Stack Overflow Treasure Hunt (BigQuery AI Hackathon)"
+          class="project-header-image"
+        />
+        <div class="project-content">
+          <div class="project-header">
+            <h3>🏆 Hackathon Data Quest: The Stack Overflow Treasure Hunt (BigQuery AI)</h3>
+            <span class="project-status ongoing">Competition</span>
+          </div>
+
+          <p class="competition-tagline">
+            <strong>BigQuery AI Hackathon 2025 – Building the Future of Data</strong><br />
+            Kaggle Competition:
+            <a href="https://www.kaggle.com/competitions/bigquery-ai-hackathon" target="_blank">
+              View Challenge →
+            </a>
+          </p>
+
+          <p>
+            An <strong>AI-powered developer helpdesk pipeline</strong> that transforms raw Stack Overflow questions into a
+            <strong>searchable, summarized, and semantically indexed knowledge base</strong> for instant query resolution.
+            Designed for the BigQuery AI Hackathon, showcasing how <em>Generative AI</em> and <em>Vector Search</em> can
+            solve real-world data discovery problems.
+          </p>
+
+          <ul>
+            <li>🤖 AI summarization of long-form questions using <code>AI.GENERATE</code></li>
+            <li>🔍 Semantic embeddings via <code>ML.GENERATE_EMBEDDING</code> for vector-based search</li>
+            <li>📊 Interactive EDA visualizations (word clouds, histograms, t-SNE projections)</li>
+            <li>💰 Cost-optimized BigQuery AI pipeline with idempotent dataset creation</li>
+          </ul>
+
+          <p><strong>Click to view full notebook & demo →</strong></p>
+
+          <div class="project-links">
+            <a href="https://www.kaggle.com/code/tobijoshua/ai-developer-help-desk-q-a" 
+               title="Kaggle Notebook" aria-label="Kaggle Notebook" target="_blank">
+              <i class="fab fa-kaggle"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-all-container">
+        <a href="all-projects.html" class="view-all-button" aria-label="View All Projects">
+          View All Projects
         </a>
       </div>
-    </div>
-  </div>
-
-   <div
-  class="project-card"
-  tabindex="0"
-  role="button"
-  aria-pressed="false"
-  data-private="false"
-  data-link="project.html?id=3"
->
-  <img
-    src="https://ik.imagekit.io/experthivetutors/Screenshot_2025-08-07-12-38-35-009_com.experthivetutors.EHFS.jpg?updatedAt=1754574988667"
-    alt="Hive Tutors Mobile App"
-    class="project-header-image"
-  />
-  <div class="project-content">
-    <div class="project-header">
-      <h3>Hive Tutors Mobile App (Android/iOS) 📚</h3>
-      <span class="project-status completed">Completed</span>
-    </div>
-
-    <p>
-      A full-featured academic mobile app connecting students with expert tutors in real time. Combines <strong>Q&A, video courses, live classes</strong>, and <strong>study materials</strong> into a unified learning ecosystem.
-    </p>
-
-    <ul>
-      <li>✅ Real-time Q&A support system (Chegg-style)</li>
-      <li>🎥 Structured video course marketplace (Udemy-style)</li>
-      <li>🧑‍🏫 Live class scheduling (Zoom-style)</li>
-      <li>📚 Digital academic resource store</li>
-    </ul>
-
-    <p><strong>Click to view full documentation & features →</strong></p>
-
-    <div class="project-links">
-        <a href="#" class="private-link" title="GitHub (Private)" aria-label="GitHub (Private)">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="#" class="private-link" title="Live Demo (Private)" aria-label="Live Demo (Private)">
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-  </div>
-</div>
-
-   <div
-  class="project-card"
-  tabindex="0"
-  role="button"
-  aria-pressed="false"
-  data-private="false"
-  data-link="project.html?id=6"
->
-  <img
-    src="https://ik.imagekit.io/ooiob6xdv/AI-Powered%20Developer%20Helpdesk1755041295.jpg?updatedAt=1755169343431"
-    alt="Hackathon Data Quest: The Stack Overflow Treasure Hunt (BigQuery AI Hackathon)"
-    class="project-header-image"
-  />
-  <div class="project-content">
-    <div class="project-header">
-      <h3>🏆 Hackathon Data Quest: The Stack Overflow Treasure Hunt (BigQuery AI)</h3>
-      <span class="project-status ongoing">Competition</span>
-    </div>
-
-    <p class="competition-tagline">
-      <strong>BigQuery AI Hackathon 2025 – Building the Future of Data</strong><br />
-      Kaggle Competition: 
-      <a href="https://www.kaggle.com/competitions/bigquery-ai-hackathon" target="_blank">
-        View Challenge →
-      </a>
-    </p>
-
-    <p>
-      An <strong>AI-powered developer helpdesk pipeline</strong> that transforms raw Stack Overflow questions into a
-      <strong>searchable, summarized, and semantically indexed knowledge base</strong> for instant query resolution.
-      Designed for the BigQuery AI Hackathon, showcasing how <em>Generative AI</em> and <em>Vector Search</em> can
-      solve real-world data discovery problems.
-    </p>
-
-    <ul>
-      <li>🤖 AI summarization of long-form questions using <code>AI.GENERATE</code></li>
-      <li>🔍 Semantic embeddings via <code>ML.GENERATE_EMBEDDING</code> for vector-based search</li>
-      <li>📊 Interactive EDA visualizations (word clouds, histograms, t-SNE projections)</li>
-      <li>💰 Cost-optimized BigQuery AI pipeline with idempotent dataset creation</li>
-    </ul>
-
-    <p><strong>Click to view full notebook & demo →</strong></p>
-
-    <div class="project-links">
-      <a href="https://www.kaggle.com/code/tobijoshua/ai-developer-help-desk-q-a" 
-         title="Kaggle Notebook" aria-label="Kaggle Notebook" target="_blank">
-        <i class="fab fa-kaggle"></i>
-      </a>
-    </div>
-  </div>
-</div>
-   
-<!-- Existing project cards... -->
-
-<div class="view-all-container">
-  <a href="all-projects.html" class="view-all-button" aria-label="View All Projects">
-    View All Projects
-  </a>
-</div>
-
-      
     </section>
 
     <section class="contact">
@@ -660,6 +710,7 @@
       </div>
     </section>
   </main>
+
   <footer>
     &copy; <span id="year"></span> Tobi Joshua Samuel
   </footer>
@@ -677,93 +728,83 @@
     </div>
   </div>
 
+  <script>
+    const modal = document.getElementById('modal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
 
-
-
-  
- <script>
-  const modal = document.getElementById('modal');
-  const closeModalBtn = document.getElementById('closeModalBtn');
-
-  function showModal() {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    closeModalBtn?.focus();
-  }
-
-  function hideModal() {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-
-  // Handle clicks on links with .private-link (prevent default and show modal)
-  document.querySelectorAll('.private-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      showModal();
-    });
-  });
-
-  // Close modal when clicking "X" button
-  closeModalBtn?.addEventListener('click', hideModal);
-
-  // Close modal when clicking outside the modal content
-  modal?.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      hideModal();
+    function showModal() {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      closeModalBtn?.focus();
     }
-  });
 
-  // Project card interactions
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('click', (event) => {
-      // Allow inner links to work (e.g., GitHub or demo links)
-      if (event.target.closest('a')) return;
+    function hideModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
 
-      // 🎉 Confetti animation on click
-      if (typeof party !== 'undefined' && party.confetti) {
-        party.confetti(card, {
-          count: party.variation.range(20, 40),
-          spread: 70,
-          speed: 500,
-          size: 1.5
-        });
-      }
-
-      const isPrivate = card.getAttribute('data-private') === 'true';
-
-      if (isPrivate) {
-        showModal();
-      } else {
-        const link = card.getAttribute('data-link');
-        if (link) {
-          window.location.href = link;
-        }
-      }
-    });
-
-    // Accessibility: open on Enter or Space
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+    document.querySelectorAll('.private-link').forEach(link => {
+      link.addEventListener('click', (e) => {
         e.preventDefault();
-        card.click();
+        showModal();
+      });
+    });
+
+    closeModalBtn?.addEventListener('click', hideModal);
+
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        hideModal();
       }
     });
-  });
-</script>
-<script>
-  const searchInput = document.getElementById('searchInput');
-  const projectCards = document.querySelectorAll('.project-card');
 
-  searchInput.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a')) return;
 
-    projectCards.forEach(card => {
-      const text = card.textContent.toLowerCase();
-      card.style.display = text.includes(query) ? 'flex' : 'none';
+        if (typeof party !== 'undefined' && party.confetti) {
+          party.confetti(card, {
+            count: party.variation.range(20, 40),
+            spread: 70,
+            speed: 500,
+            size: 1.5
+          });
+        }
+
+        const isPrivate = card.getAttribute('data-private') === 'true';
+
+        if (isPrivate) {
+          showModal();
+        } else {
+          const link = card.getAttribute('data-link');
+          if (link) {
+            window.location.href = link;
+          }
+        }
+      });
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
     });
-  });
-</script>
+  </script>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+
+      projectCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(query) ? 'flex' : 'none';
+      });
+    });
+  </script>
 
   <script>(function(w,d,s,u,o){w._cyA11yConfig={"iconId":"default","position":{"mobile":"bottom-right","desktop":"bottom-right"},"language":{"default":"en","selected":[]}};var js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.src=u;js.async=true;fjs.parentNode.insertBefore(js,fjs);})(window,document,"script","https://cdn-cookieyes.com/widgets/accessibility.js?id=15a52046-1dc2-4123-abc2-6e809a8c3e84");</script>
 
