@@ -524,6 +524,84 @@ Ideal for creating modern ad marketplaces, scalable classifieds systems, or paid
       
     };
 
+
+
+      "8": {
+  title: "Spam Detection AI — NLP + Explainable ML System",
+  images: [
+    {
+      src: "image.png",
+      title: "Spam Detection AI — App Preview"
+    },
+    {
+      src: "image-1.png",
+      title: "Spam Detection AI — Results Preview"
+    }
+  ],
+  description: `
+    <p>
+      <strong>Spam Detection AI</strong> is a production-style machine learning project that classifies SMS messages as <strong>Spam</strong> or <strong>Ham</strong> using an end-to-end NLP pipeline and an interactive Streamlit interface.
+    </p>
+
+    <h4>🧠 Core ML Pipeline</h4>
+    <ul>
+      <li>Text cleaning, normalization, and preprocessing for SMS data</li>
+      <li>Feature extraction using <strong>TF-IDF</strong> with unigram and bigram support</li>
+      <li>Binary classification with <strong>Logistic Regression</strong></li>
+      <li>Cross-validation and model evaluation for robust performance tracking</li>
+      <li>Saved model artifacts for reusable inference (<code>spam_model.pkl</code> and <code>tfidf_vectorizer.pkl</code>)</li>
+    </ul>
+
+    <h4>🏷️ Data Annotation & Labeling</h4>
+    <ul>
+      <li>Uses a labeled SMS dataset for supervised learning</li>
+      <li>Supports structured label mapping for Spam/Ham classification</li>
+      <li>Designed with room for human-in-the-loop annotation workflows and active learning extensions</li>
+    </ul>
+
+    <h4>🧾 Explainability</h4>
+    <ul>
+      <li>Highlights token-level contributions that influence predictions</li>
+      <li>Makes spam decisions easier to understand and audit</li>
+      <li>Helps users see why a message is classified as risky</li>
+    </ul>
+
+    <h4>🎛️ Streamlit App Features</h4>
+    <ul>
+      <li>Real-time spam/ham predictions</li>
+      <li>Adjustable spam threshold for risk tuning</li>
+      <li>Confidence score visualization</li>
+      <li>Quick-load sample messages</li>
+      <li>Prediction history tracking</li>
+      <li>Downloadable outputs for review and reuse</li>
+    </ul>
+
+    <h4>📂 Batch Processing</h4>
+    <ul>
+      <li>CSV upload for bulk classification</li>
+      <li>Automatic detection of the text column</li>
+      <li>Download predictions as CSV</li>
+    </ul>
+
+    <h4>📊 Model Performance</h4>
+    <ul>
+      <li><strong>Accuracy:</strong> 96.6%</li>
+      <li><strong>Precision:</strong> 99.1%</li>
+      <li><strong>Recall:</strong> 75.2%</li>
+      <li><strong>F1 Score:</strong> 85.5%</li>
+    </ul>
+
+    <h4>🚀 Why This Project Matters</h4>
+    <p>
+      This project shows how a lightweight machine learning model can evolve into a usable AI product with preprocessing, labeling, explainability, batching, and a clean user interface.
+    </p>
+  `,
+  links: [
+    { href: "https://github.com/Tobi-joshua/Spam-Detection-AI", label: "GitHub Repository" }
+  ],
+  private: false
+}
+
     const project = projects[id];
 
     if (!project) {
@@ -596,4 +674,3 @@ Ideal for creating modern ad marketplaces, scalable classifieds systems, or paid
   </script>
 </body>
 </html>
-
