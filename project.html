@@ -595,6 +595,137 @@ Ideal for creating modern ad marketplaces, scalable classifieds systems, or paid
     { href: "https://github.com/Tobi-joshua/Spam-Detection-AI", label: "GitHub Repository" }
   ],
   private: false
+},
+
+"9": {
+  title: "Biohub Cell Lineage Tracker — 3D Cell Detection, Tracking & Lineage Reconstruction",
+  images: [
+    {
+      src: "https://raw.githubusercontent.com/Tobi-joshua/Biohub---Cell-Tracking-During-Development/main/figures/pipeline_overview.png",
+      title: "Pipeline Overview"
+    },
+    {
+      src: "https://raw.githubusercontent.com/Tobi-joshua/Biohub---Cell-Tracking-During-Development/main/figures/detection_overlay.png",
+      title: "Detection Overlay"
+    },
+    {
+      src: "https://raw.githubusercontent.com/Tobi-joshua/Biohub---Cell-Tracking-During-Development/main/figures/lineage_graph.png",
+      title: "Lineage Graph"
+    },
+    {
+      src: "https://raw.githubusercontent.com/Tobi-joshua/Biohub---Cell-Tracking-During-Development/main/figures/temporal_montage.png",
+      title: "Temporal Montage"
+    }
+  ],
+  description: `
+    <p>
+      <strong>Biohub Cell Lineage Tracker</strong> is an interactive pipeline and Streamlit application for
+      <strong>3D time-lapse cell detection, tracking, and lineage reconstruction</strong> in fluorescence microscopy volumes.
+      It targets the <strong>Biohub Cell Tracking During Development</strong> challenge — detecting and tracking zebrafish cells through 3D space and time.
+    </p>
+
+    <h4>🔬 Core Capabilities</h4>
+    <ul>
+      <li>Local <strong>Zarr / GEFF</strong> dataset browser with train and test splits</li>
+      <li>Detection, Hungarian linking, and division inference (pipeline v1.6 competition preset)</li>
+      <li>Interactive viewers: volume slices, detection overlays, inter-frame links</li>
+      <li>Publication-style plots: montage, lineage timeline, scale bars</li>
+      <li>GIF time-lapse export for presentations and papers</li>
+      <li>CSV / JSON export of lineage graphs</li>
+    </ul>
+
+    <h4>🧠 Pipeline Summary</h4>
+    <ul>
+      <li><strong>Detection:</strong> Full-Z + XY block-mean, local maxima, dense-cluster pass, centroid refinement</li>
+      <li><strong>Linking:</strong> Hungarian assignment with distance, motion, intensity, and neighborhood costs</li>
+      <li><strong>Divisions:</strong> Sister-distance and midpoint-gated mitosis inference with symmetry scoring</li>
+      <li><strong>Post-process:</strong> Gap closing, soft orphan pruning, optional isolated-node removal</li>
+    </ul>
+
+    <h4>🛠️ Tech Stack</h4>
+    <ul>
+      <li>Python, Streamlit, scikit-image, NumPy, Zarr</li>
+      <li>Hungarian assignment (scipy), hyperparameter tuning scripts</li>
+      <li>IEEE-style LaTeX manuscript in <code>paper/</code></li>
+      <li>Deployed on Streamlit Community Cloud</li>
+    </ul>
+
+    <h4>📐 Data Format</h4>
+    <p>
+      Volumes are <code>(T, Z, Y, X)</code> uint16 Zarr. Voxel spacing: Z = 1.625 µm, Y = X = 0.40625 µm.
+      Try the <strong>Synthetic demo</strong> in the live app without downloading datasets.
+    </p>
+  `,
+  links: [
+    { href: "https://github.com/Tobi-joshua/Biohub---Cell-Tracking-During-Development", label: "GitHub Repository" },
+    { href: "https://bioapp---cell-tracking-during-development-ezpjtah7icn2tfr8tie4.streamlit.app/", label: "Live Streamlit Demo" }
+  ],
+  private: false
+},
+
+"10": {
+  title: "EduFlow — School Operations Platform",
+  images: [
+    {
+      src: "https://raw.githubusercontent.com/Tobi-joshua/EduFlowSoftware/main/image-1.png",
+      title: "EduFlow Platform Preview"
+    }
+  ],
+  description: `
+    <p>
+      <strong>EduFlow</strong> is a <strong>School Operations Platform</strong> for primary and secondary schools in Nigeria.
+      It helps school owners, principals, vice principals, HODs, teachers, and parents manage school operations digitally in one system.
+      Students do not have accounts in Version 1.
+    </p>
+
+    <h4>👥 Roles & Access</h4>
+    <ul>
+      <li><strong>Owner</strong> — Schools, billing, subscriptions, analytics</li>
+      <li><strong>Principal</strong> — Staff, students, parents, academics, attendance, payroll, reports, teacher approval</li>
+      <li><strong>Vice Principal</strong> — Attendance (view), reports (view), academics (manage)</li>
+      <li><strong>HOD</strong> — Department teachers, teaching logs, department reports</li>
+      <li><strong>Teacher</strong> — Classes, attendance, teaching logs, assessments (must be approved)</li>
+      <li><strong>Parent</strong> — Own children's attendance, report cards, announcements</li>
+    </ul>
+
+    <h4>📦 Platform Modules</h4>
+    <ul>
+      <li>Academics — sessions, terms, departments, subjects, classes</li>
+      <li>Attendance — student and teacher attendance tracking</li>
+      <li>Teaching logs, leave management, and staff assignments</li>
+      <li>Reports — assessments, exams, and report cards</li>
+      <li>Communications — announcements and messages</li>
+      <li>Payroll — salaries, payroll runs, and payslips</li>
+      <li>Billing — plans, subscriptions, and invoices (owner only)</li>
+      <li>AI Assistant — Groq-powered draft content</li>
+    </ul>
+
+    <h4>🛠️ Technology Stack</h4>
+    <ul>
+      <li><strong>Backend:</strong> Python 3.12+, Django, Django REST Framework, SimpleJWT, PostgreSQL (production), SQLite (dev)</li>
+      <li><strong>Frontend:</strong> React, Vite, TypeScript, React Router, Axios</li>
+      <li><strong>Integrations:</strong> Paystack payments, Cloudflare R2 storage, Groq AI, SMTP email</li>
+      <li><strong>API docs:</strong> OpenAPI schema with Swagger UI and ReDoc (development)</li>
+    </ul>
+
+    <h4>🔐 Architecture</h4>
+    <ul>
+      <li>JWT authentication with 30-minute access tokens and refresh rotation</li>
+      <li>School-scoped role-based access control</li>
+      <li>Teacher approval required before protected endpoint access</li>
+      <li>Function-based API views with comprehensive markdown documentation</li>
+    </ul>
+
+    <h4>🔒 Access</h4>
+    <p>
+      This repository is <strong>private</strong> and actively maintained (RC2 production hardening).
+      Email <a href="mailto:info@experthivetutors.com">info@experthivetutors.com</a> to request access for collaborators or recruiters.
+    </p>
+  `,
+  links: [
+    { href: "#", label: "GitHub Repo (Restricted)" }
+  ],
+  private: true
 }
 };
 
