@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tobi Joshua — Senior Software Engineer</title>
+  <meta name="description" content="Full-stack engineer and data scientist. Production systems, ML pipelines, CI/CD." />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="icon" href="https://ik.imagekit.io/experthivetutors/ChatGPT%20Image%20Aug%207,%202025,%2006_07_53%20AM.png?updatedAt=1754572188208" type="image/png" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme", t || "dark");
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20260711" />
+  <link rel="stylesheet" href="assets/css/base.css?v=20260711" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260711" />
+</head>
+<body>
+  <noscript>
+    <p style="padding:2rem;text-align:center;font-family:system-ui,sans-serif;">
+      This portfolio requires JavaScript. Please enable it to view the site.
+    </p>
+  </noscript>
+  <div id="nav"></div>
+
+  <main>
+    <section class="hero container">
+      <div class="hero__layout">
+        <div id="hero-avatar"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">Available for senior roles</p>
+          <h1 class="hero__title" id="hero-name">Tobi Joshua Samuel</h1>
+          <p class="hero__subtitle" id="hero-tagline">Full-stack systems, ML pipelines, and production delivery with CI/CD.</p>
+          <div class="hero__actions" id="hero-actions"></div>
+        </div>
+      </div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section__header">
+        <div>
+          <h2 class="section__title">About</h2>
+          <p class="section__desc">Background and what I work on</p>
+        </div>
+      </div>
+      <div class="about-panel" id="about-content">
+        <p>I'm a data scientist and software engineer with 4+ years designing, building, and deploying machine learning models and full-stack web applications.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="expertise">
+      <div class="section__header">
+        <div>
+          <h2 class="section__title">Expertise</h2>
+          <p class="section__desc">Core stack and domains</p>
+        </div>
+      </div>
+      <div class="tags" id="expertise-tags"></div>
+    </section>
+
+    <section class="section container" id="cicd">
+      <div class="section__header">
+        <div>
+          <h2 class="section__title">CI/CD & Delivery</h2>
+          <p class="section__desc">Automated pipelines across every project I ship</p>
+        </div>
+      </div>
+      <div class="cicd-grid" id="cicd-grid"></div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section__header">
+        <div>
+          <h2 class="section__title">Selected Work</h2>
+          <p class="section__desc">Recent production systems and research</p>
+        </div>
+        <a href="projects.html" class="btn btn--ghost">View all <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="grid" id="featured-grid"></div>
+    </section>
+
+    <section class="section container" id="research">
+      <div class="section__header">
+        <div>
+          <h2 class="section__title">Research & Publications</h2>
+          <p class="section__desc" id="research-intro">Papers and proposals on ResearchGate</p>
+        </div>
+        <a href="https://www.researchgate.net/profile/Tobi-Samuel-2" id="research-profile-link" class="btn btn--ghost" target="_blank" rel="noopener">
+          <i class="fab fa-researchgate"></i> Profile
+        </a>
+      </div>
+      <p class="research-affiliation" id="research-affiliation"></p>
+      <div class="pub-list" id="publications"></div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="section__header">
+        <div>
+          <h2 class="section__title">Contact</h2>
+          <p class="section__desc">Open to senior engineering and ML roles</p>
+        </div>
+      </div>
+      <div class="hero__actions" id="contact-actions"></div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="modal__box">
+      <h3>Private Repository</h3>
+      <p>Email <a href="mailto:info@experthivetutors.com">info@experthivetutors.com</a> for access.</p>
+      <button class="btn btn--primary modal__close">Close</button>
+    </div>
+  </div>
+
+  <script type="module">
+    import {
+      loadData, renderNav, renderFooter, renderAvatar, cvButton,
+      renderProjectCard, renderPublications, bindCards, bindModal
+    } from "./assets/js/app.js?v=20260711";
+    import { bindTheme } from "./assets/js/theme.js?v=20260711";
+
+    try {
+    const data = await loadData();
+    const { profile, stats, expertise, cicd, projects, research } = data;
+
+    document.title = `${profile.name} — ${profile.title}`;
+    document.querySelector('meta[name="description"]').setAttribute(
+      "content",
+      profile.about?.[0]?.slice(0, 155) || profile.summary
+    );
+    document.getElementById("nav").innerHTML = renderNav("home", profile);
+    document.getElementById("footer").innerHTML = renderFooter(profile);
+    document.getElementById("hero-avatar").innerHTML = renderAvatar(profile);
+
+    document.getElementById("hero-name").textContent = profile.name;
+    document.getElementById("hero-tagline").textContent = profile.tagline;
+
+    const aboutHtml = (profile.about || [profile.summary]).map((p) => `<p>${p}</p>`).join("");
+    const companyNote = profile.company
+      ? `<p class="about-note"><i class="fas fa-building" aria-hidden="true"></i> <strong>${profile.company.role}</strong> — <a href="${profile.company.url}" target="_blank" rel="noopener">${profile.company.name}</a></p>`
+      : "";
+    document.getElementById("about-content").innerHTML = aboutHtml + companyNote;
+
+    document.getElementById("hero-actions").innerHTML = `
+      <a href="${profile.github}" class="btn btn--primary" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+      <a href="${profile.linkedin}" class="btn btn--ghost" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      ${cvButton(profile)}
+      <a href="projects.html" class="btn btn--ghost">Projects <i class="fas fa-arrow-right"></i></a>
+    `;
+
+    document.getElementById("stats").innerHTML = stats.map((s) => `
+      <div class="stat">
+        <div class="stat__value">${s.value}</div>
+        <div class="stat__label">${s.label}</div>
+      </div>
+    `).join("");
+
+    document.getElementById("expertise-tags").innerHTML = expertise.map((t) => `<span class="tag">${t}</span>`).join("");
+
+    const icons = ["fa-code-branch", "fa-docker", "fa-shield-halved", "fa-cloud-arrow-up"];
+    document.getElementById("cicd-grid").innerHTML = cicd.map((c, i) => `
+      <div class="cicd-card">
+        <div class="cicd-card__icon"><i class="fas ${icons[i] || "fa-gears"}"></i></div>
+        <h3 class="cicd-card__title">${c.title}</h3>
+        <p class="cicd-card__text">${c.text}</p>
+      </div>
+    `).join("");
+
+    const featured = projects.filter((p) => p.featured);
+    const grid = document.getElementById("featured-grid");
+    grid.innerHTML = featured.map((p) => renderProjectCard(p)).join("");
+    bindCards(grid);
+
+    if (research) {
+      document.getElementById("research-intro").textContent = research.intro || "Papers and proposals on ResearchGate";
+      document.getElementById("research-affiliation").textContent = research.affiliation || "";
+      document.getElementById("research-profile-link").href = research.profile || profile.researchgate;
+      document.getElementById("publications").innerHTML = renderPublications(research, profile);
+    }
+
+    document.getElementById("contact-actions").innerHTML = `
+      <a href="mailto:${profile.email}" class="btn btn--primary"><i class="fas fa-envelope"></i> ${profile.email}</a>
+      ${cvButton(profile)}
+      ${profile.researchgate ? `<a href="${profile.researchgate}" class="btn btn--ghost" target="_blank" rel="noopener"><i class="fab fa-researchgate"></i> ResearchGate</a>` : ""}
+      <a href="${profile.github}" class="btn btn--ghost" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+      <a href="${profile.linkedin}" class="btn btn--ghost" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    `;
+
+    bindModal();
+    bindTheme();
+    } catch (err) {
+      console.error(err);
+      document.body.insertAdjacentHTML("beforeend",
+        '<p style="padding:2rem;text-align:center;color:#f87171;">Failed to load portfolio data. Hard-refresh the page (Ctrl+Shift+R).</p>');
+    }
+  </script>
+</body>
+</html>
