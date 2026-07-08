@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Tobi Joshua</title>
+  <meta name="description" content="Production systems, ML pipelines, and full-stack applications." />
+  <link rel="icon" href="https://ik.imagekit.io/experthivetutors/ChatGPT%20Image%20Aug%207,%202025,%2006_07_53%20AM.png?updatedAt=1754572188208" type="image/png" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme", t || "dark");
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20260711" />
+  <link rel="stylesheet" href="assets/css/base.css?v=20260711" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260711" />
+</head>
+<body>
+  <div id="nav"></div>
+
+  <main class="container">
+    <section class="detail-hero">
+      <h1>Projects</h1>
+      <p class="subtitle">10 shipped systems — web, ML, mobile, and research</p>
+    </section>
+
+    <div class="filters">
+      <label for="search" class="sr-only">Search</label>
+      <input type="search" id="search" placeholder="Search by name, tech, or domain…" autocomplete="off" />
+      <select id="filter-status" aria-label="Filter by status">
+        <option value="">All status</option>
+        <option value="active">Active</option>
+        <option value="completed">Done</option>
+        <option value="competition">Competition</option>
+      </select>
+      <select id="filter-type" aria-label="Filter by type">
+        <option value="">All types</option>
+        <option value="product">Product</option>
+        <option value="research">Research</option>
+        <option value="client">Client</option>
+        <option value="opensource">Open Source</option>
+      </select>
+    </div>
+
+    <p class="section__desc" id="result-count" style="margin: -1rem 0 1.5rem;"></p>
+    <div class="grid" id="project-grid"></div>
+  </main>
+
+  <div id="footer"></div>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="modal__box">
+      <h3>Private Repository</h3>
+      <p>Email <a href="mailto:info@experthivetutors.com">info@experthivetutors.com</a> for access.</p>
+      <button class="btn btn--primary modal__close">Close</button>
+    </div>
+  </div>
+
+  <script type="module">
+    import {
+      loadData, renderNav, renderFooter, renderProjectCard, bindCards, bindModal
+    } from "./assets/js/app.js?v=20260711";
+    import { bindTheme } from "./assets/js/theme.js?v=20260711";
+
+    const data = await loadData();
+    document.getElementById("nav").innerHTML = renderNav("projects", data.profile);
+    document.getElementById("footer").innerHTML = renderFooter(data.profile);
+
+    const grid = document.getElementById("project-grid");
+    const search = document.getElementById("search");
+    const filterStatus = document.getElementById("filter-status");
+    const filterType = document.getElementById("filter-type");
+    const resultCount = document.getElementById("result-count");
+
+    function render(list) {
+      grid.innerHTML = list.map((p) => renderProjectCard(p)).join("");
+      bindCards(grid);
+      resultCount.textContent = `Showing ${list.length} of ${data.projects.length}`;
+    }
+
+    function applyFilters() {
+      const q = search.value.toLowerCase();
+      const st = filterStatus.value;
+      const ty = filterType.value;
+      const filtered = data.projects.filter((p) => {
+        const text = `${p.title} ${p.subtitle} ${p.summary} ${p.tech.join(" ")}`.toLowerCase();
+        if (q && !text.includes(q)) return false;
+        if (st && p.status !== st) return false;
+        if (ty && p.type !== ty) return false;
+        return true;
+      });
+      render(filtered);
+    }
+
+    search.addEventListener("input", applyFilters);
+    filterStatus.addEventListener("change", applyFilters);
+    filterType.addEventListener("change", applyFilters);
+
+    render(data.projects);
+    bindModal();
+    bindTheme();
+  </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+{
+  "profile": {
+    "name": "Tobi Joshua Samuel",
+    "title": "Senior Software Engineer · Data Scientist",
+    "tagline": "Full-stack systems, ML pipelines, and production delivery with CI/CD.",
+    "location": "Nigeria",
+    "years": "4+",
+    "email": "tobilobasam3@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/tobi-joshua-aaa08a191/",
+    "github": "https://github.com/Tobi-joshua",
+    "twitter": "https://x.com/TobiJoshua123",
+    "researchgate": "https://www.researchgate.net/profile/Tobi-Samuel-2",
+    "summary": "I design and ship production software — APIs, ML systems, and cloud-native apps — with strong emphasis on automated pipelines, observability, and clean architecture.",
+    "about": [
+      "I'm a data scientist and software engineer with 4+ years designing, building, and deploying machine learning models and full-stack web applications. My core stack is Python, Django, React, and PostgreSQL, with a focus on systems that are reliable in production.",
+      "I founded Expert Hive Tutors, an EdTech platform that connects students with verified tutors for academic support — spanning a React web app, Django REST API, and React Native mobile product used in Nigeria.",
+      "My work includes predictive analytics, deep learning pipelines, enterprise APIs, and client-facing platforms. I collaborate with cross-functional teams, mentor junior developers, and care about turning complex data problems into clear, maintainable software.",
+      "I'm especially interested in data-driven products, fintech, and scalable web systems. When I'm not shipping, I explore new AI tooling, contribute to open source, and share what I learn with the developer community."
+    ],
+    "company": {
+      "name": "Expert Hive Tutors",
+      "role": "Founder",
+      "url": "https://experthivetutors.com/"
+    },
+    "avatar": "assets/images/profile.png",
+    "avatarFallback": "assets/images/profile-placeholder.svg",
+    "cv": "assets/cv/Tobi-Joshua-CV.pdf"
+  },
+  "research": {
+    "profile": "https://www.researchgate.net/profile/Tobi-Samuel-2",
+    "affiliation": "University of Lagos · Lagos, Nigeria",
+    "intro": "Selected papers and proposals on computer vision, medical imaging, security systems, and control engineering.",
+    "publications": [
+      {
+        "title": "Biohub Cell Lineage Tracker: An Open Pipeline and Interactive System for 3D Cell Tracking During Development",
+        "type": "Research Proposal",
+        "date": "June 2026",
+        "projectId": "9"
+      },
+      {
+        "title": "Development of a Lightweight AI-Assisted Triage Pipeline for Chest Imaging (X-ray / CT)",
+        "type": "Preprint",
+        "date": "January 2026"
+      },
+      {
+        "title": "Real-time Intrusion Detection System on Windows: Implementation of a Network-Based Security Information System",
+        "type": "Research Proposal",
+        "date": "January 2025",
+        "coauthors": ["Tolulope Erinosho"],
+        "projectId": "4"
+      },
+      {
+        "title": "Stability and Control Analysis of Douglas DC-8",
+        "type": "Technical Report",
+        "date": "December 2023",
+        "coauthors": ["Tolulope Erinosho"]
+      },
+      {
+        "title": "Medical Image Filtering (Lung-CT scan image from an animal lung research study)",
+        "type": "Research",
+        "date": "February 2023"
+      }
+    ]
+  },
+  "stats": [
+    { "value": "4+", "label": "Years shipping" },
+    { "value": "10", "label": "Projects" },
+    { "value": "CI/CD", "label": "Pipelines built" },
+    { "value": "Full-stack", "label": "Web · ML · Mobile" }
+  ],
+  "expertise": [
+    "Python", "TypeScript", "Django", "React", "PostgreSQL",
+    "Machine Learning", "Computer Vision", "LLMs", "Docker",
+    "GitHub Actions", "AWS EC2", "Firebase", "Redis"
+  ],
+  "cicd": [
+    {
+      "title": "Automated delivery",
+      "text": "GitHub Actions workflows for test, lint, build, and deploy across frontend and backend repos."
+    },
+    {
+      "title": "Containerized services",
+      "text": "Docker-based environments for reproducible dev and production parity on cloud hosts."
+    },
+    {
+      "title": "Production hardening",
+      "text": "Environment-driven config, OpenAPI docs, JWT rotation, and staged RC releases (e.g. EduFlow RC2)."
+    },
+    {
+      "title": "Multi-target deploy",
+      "text": "AWS EC2, Streamlit Cloud, PythonAnywhere, and GitHub Pages — each with tailored pipelines."
+    }
+  ],
+  "projects": [
+    {
+      "id": "10",
+      "slug": "eduflow",
+      "title": "EduFlow",
+      "subtitle": "School operations platform · Nigeria",
+      "year": 2026,
+      "status": "active",
+      "type": "product",
+      "featured": true,
+      "private": true,
+      "tech": ["Django", "DRF", "React", "Vite", "TypeScript", "PostgreSQL", "Groq", "Paystack"],
+      "thumbnail": "assets/images/eduflow.png",
+      "thumbnailFallback": "assets/images/eduflow-preview.svg",
+      "summary": "Multi-role school ops: academics, attendance, payroll, billing, and AI drafts. JWT RBAC across owner, principal, teacher, and parent roles.",
+      "highlights": ["12 API modules", "OpenAPI + Swagger", "RC2 production hardening", "Paystack billing"],
+      "links": {}
+    },
+    {
+      "id": "9",
+      "slug": "biohub",
+      "title": "Biohub Cell Lineage Tracker",
+      "subtitle": "3D microscopy · competition entry",
+      "year": 2026,
+      "status": "competition",
+      "type": "research",
+      "featured": true,
+      "private": false,
+      "tech": ["Python", "Streamlit", "scikit-image", "Zarr", "Computer Vision"],
+      "thumbnail": "https://raw.githubusercontent.com/Tobi-joshua/Biohub---Cell-Tracking-During-Development/main/figures/pipeline_overview.png",
+      "summary": "Detect, track, and reconstruct cell lineages in 3D+time zebrafish volumes. Hungarian linking, division inference, Streamlit UI, IEEE paper.",
+      "highlights": ["Live Streamlit app", "Zarr/GEFF pipeline", "Lineage CSV/JSON export", "Hyperparameter tuning"],
+      "links": {
+        "github": "https://github.com/Tobi-joshua/Biohub---Cell-Tracking-During-Development",
+        "demo": "https://bioapp---cell-tracking-during-development-ezpjtah7icn2tfr8tie4.streamlit.app/"
+      }
+    },
+    {
+      "id": "8",
+      "slug": "spam-detection-ai",
+      "title": "Spam Detection AI",
+      "subtitle": "NLP · explainable ML",
+      "year": 2025,
+      "status": "completed",
+      "type": "research",
+      "featured": true,
+      "private": false,
+      "tech": ["Python", "Scikit-learn", "Streamlit", "TF-IDF"],
+      "thumbnail": "https://ik.imagekit.io/ooiob6xdv/image.png",
+      "summary": "SMS spam classifier with TF-IDF + logistic regression, explainable predictions, threshold tuning, and batch CSV inference.",
+      "highlights": ["96.6% accuracy", "Streamlit UI", "Batch processing", "Token-level explainability"],
+      "links": {
+        "github": "https://github.com/Tobi-joshua/Spam-Detection-AI"
+      }
+    },
+    {
+      "id": "7",
+      "slug": "vyzio",
+      "title": "Vyzio",
+      "subtitle": "Classifieds marketplace · client (USA)",
+      "year": 2025,
+      "status": "completed",
+      "type": "client",
+      "featured": false,
+      "private": false,
+      "tech": ["Django", "DRF", "React", "PostgreSQL", "Stripe"],
+      "thumbnail": "https://ik.imagekit.io/ooiob6xdv/d1.png?updatedAt=1755605086287",
+      "summary": "Paid listings platform with multi-image ads, admin review queue, and Stripe / mobile money / crypto payments.",
+      "highlights": ["Admin approval flow", "Multi-image CDN", "Payment integrations", "Live production"],
+      "links": {
+        "github": "https://github.com/Tobi-joshua/Vyzio-Ad-Website-Clean",
+        "demo": "https://vyzioads.pythonanywhere.com/"
+      }
+    },
+    {
+      "id": "6",
+      "slug": "bigquery-ai-helpdesk",
+      "title": "AI Developer Helpdesk",
+      "subtitle": "BigQuery AI Hackathon · Kaggle",
+      "year": 2025,
+      "status": "competition",
+      "type": "research",
+      "featured": false,
+      "private": false,
+      "tech": ["BigQuery AI", "Embeddings", "Python", "Plotly"],
+      "thumbnail": "https://ik.imagekit.io/ooiob6xdv/AI-Powered%20Developer%20Helpdesk1755041295.jpg?updatedAt=1755169343431",
+      "summary": "Stack Overflow Q&A pipeline: AI summarization, vector embeddings, semantic search, and t-SNE cluster viz.",
+      "highlights": ["AI.GENERATE summaries", "Vector search", "Cost-optimized BQ pipeline", "Kaggle notebook"],
+      "links": {
+        "demo": "https://www.kaggle.com/code/tobijoshua/ai-developer-help-desk-q-a"
+      }
+    },
+    {
+      "id": "5",
+      "slug": "react-typeflare",
+      "title": "React TypeFlare",
+      "subtitle": "Open-source npm package",
+      "year": 2025,
+      "status": "completed",
+      "type": "opensource",
+      "featured": false,
+      "private": false,
+      "tech": ["React", "TypeScript", "npm"],
+      "thumbnail": "https://raw.githubusercontent.com/Tobi-joshua/react-typeflare/main/assets/basic_usage_with_confetti-ezgif.com-optimize.gif",
+      "summary": "Typewriter animation component with confetti, reverse loop, pause-on-hover, and cursor customization.",
+      "highlights": ["Published on npm", "Lightweight API", "Confetti effects", "Event callbacks"],
+      "links": {
+        "github": "https://github.com/Tobi-joshua/react-typeflare",
+        "demo": "https://www.npmjs.com/package/react-typeflare"
+      }
+    },
+    {
+      "id": "4",
+      "slug": "intrusion-detection",
+      "title": "Real-time IDS",
+      "subtitle": "Network security · Windows",
+      "year": 2024,
+      "status": "completed",
+      "type": "research",
+      "featured": false,
+      "private": false,
+      "tech": ["Python", "Random Forest", "Autoencoder", "Flask"],
+      "thumbnail": "https://ik.imagekit.io/experthivetutors/ds.png?updatedAt=1754607867802",
+      "summary": "ML-based intrusion detection: supervised Random Forest for known attacks, autoencoder for anomaly detection, web dashboard.",
+      "highlights": ["Live packet capture", "Dual-model detection", "Web UI on :5000", "CICIDS 2018 trained"],
+      "links": {
+        "github": "https://github.com/Tobi-joshua/Real-time-Intrusion-Detection-System-on-Windows"
+      }
+    },
+    {
+      "id": "3",
+      "slug": "hive-tutors-mobile",
+      "title": "Hive Tutors Mobile",
+      "subtitle": "React Native · EdTech",
+      "year": 2024,
+      "status": "completed",
+      "type": "product",
+      "featured": false,
+      "private": true,
+      "tech": ["React Native", "Expo", "Django", "Firebase", "PostgreSQL"],
+      "thumbnail": "https://ik.imagekit.io/experthivetutors/Screenshot_2025-08-07-12-38-35-009_com.experthivetutors.EHFS.jpg?updatedAt=1754574988667",
+      "summary": "Academic app: Q&A, video courses, live classes, study materials, wallet transactions, and real-time chat.",
+      "highlights": ["iOS + Android", "Firebase + DRF", "Cloud Functions", "ImageKit media"],
+      "links": {}
+    },
+    {
+      "id": "2",
+      "slug": "expert-hive-api",
+      "title": "Expert Hive Tutors API",
+      "subtitle": "Django REST · EdTech",
+      "year": 2024,
+      "status": "completed",
+      "type": "product",
+      "featured": false,
+      "private": false,
+      "tech": ["Django", "DRF", "PostgreSQL", "Swagger"],
+      "thumbnail": "https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741",
+      "summary": "Backend for tutoring marketplace: question management, tutor notifications via email/SMS, OpenAPI docs.",
+      "highlights": ["REST API", "Swagger UI", "Email + SMS alerts", "Production deployed"],
+      "links": {
+        "github": "https://github.com/Tobi-joshua/Expert-Hive-Tutors-API",
+        "demo": "https://www.experthivetutors.com/expert-hive-api-type1/"
+      }
+    },
+    {
+      "id": "1",
+      "slug": "expert-hive-web",
+      "title": "Expert Hive Tutors Web",
+      "subtitle": "React frontend · EdTech",
+      "year": 2024,
+      "status": "completed",
+      "type": "product",
+      "featured": false,
+      "private": true,
+      "tech": ["React", "Django API", "Responsive UI"],
+      "thumbnail": "https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959",
+      "summary": "Responsive React client for tutoring marketplace — question posting, materials, and secure transactions.",
+      "highlights": ["Django API integration", "Nigerian EdTech", "Production UI", "Private repo"],
+      "links": {
+        "demo": "https://experthivetutors.com/"
+      }
+    }
+  ]
+}

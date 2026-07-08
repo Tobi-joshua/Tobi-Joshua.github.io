@@ -1,0 +1,57 @@
+:root,
+[data-theme="dark"] {
+  --bg: #070b12;
+  --bg-elevated: #0d1320;
+  --bg-card: #111827;
+  --bg-card-hover: #151f30;
+  --border: rgba(148, 163, 184, 0.12);
+  --border-strong: rgba(148, 163, 184, 0.22);
+  --text: #e8edf5;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --accent: #38bdf8;
+  --accent-2: #818cf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --nav-bg: rgba(7, 11, 18, 0.82);
+  --hero-glow-1: rgba(56, 189, 248, 0.12);
+  --hero-glow-2: rgba(129, 140, 248, 0.08);
+  --btn-primary-text: #0a0f1a;
+  --hover-bg: rgba(255, 255, 255, 0.05);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #f4f7fb;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --border: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.14);
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --accent: #0284c7;
+  --accent-2: #4f46e5;
+  --accent-glow: rgba(2, 132, 199, 0.1);
+  --nav-bg: rgba(244, 247, 251, 0.88);
+  --hero-glow-1: rgba(2, 132, 199, 0.08);
+  --hero-glow-2: rgba(79, 70, 229, 0.06);
+  --btn-primary-text: #ffffff;
+  --hover-bg: rgba(15, 23, 42, 0.04);
+  --shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+  color-scheme: light;
+}
+
+:root {
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --font: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  --max: 1120px;
+  --nav-h: 64px;
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
