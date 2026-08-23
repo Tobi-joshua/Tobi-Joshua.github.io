@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="EduFlow preview">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Expert Hive OS preview">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.35"/>
@@ -12,6 +12,6 @@
   <circle cx="72" cy="62" r="6" fill="#ef4444"/>
   <circle cx="92" cy="62" r="6" fill="#fbbf24"/>
   <circle cx="112" cy="62" r="6" fill="#22c55e"/>
-  <text x="320" y="150" text-anchor="middle" font-family="system-ui,sans-serif" font-size="42" font-weight="700" fill="#e2e8f0">EduFlow</text>
-  <text x="320" y="190" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#94a3b8">School Operations Platform</text>
+  <text x="320" y="150" text-anchor="middle" font-family="system-ui,sans-serif" font-size="36" font-weight="700" fill="#e2e8f0">Expert Hive OS</text>
+  <text x="320" y="190" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#94a3b8">Intelligent School Operating System</text>
 </svg>

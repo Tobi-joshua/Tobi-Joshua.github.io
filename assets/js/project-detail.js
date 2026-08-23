@@ -1,5 +1,25 @@
 export const DETAIL_SECTIONS = {
+  "11": [
+    { title: "Platform systems", items: ["Student and tutor onboarding workflows", "Question/request lifecycle and tutor matching", "Tutor notifications (email/SMS)", "Dashboards and operational administration"] },
+    { title: "Commerce & support", items: ["Payment workflows and withdrawals", "User accounts and RBAC", "Support tooling and operational workflows"] },
+    { title: "Stack", items: ["Django REST API with PostgreSQL", "React web client", "React Native mobile app with Firebase", "Paystack payment integration"] }
+  ],
+  "12": [
+    { title: "Integration", items: ["Branded virtual classroom on BigBlueButton", "Meeting creation and scheduling", "Access control tied to tutoring platform", "Student/tutor session workflows"] },
+    { title: "Session capabilities", items: ["Live video/audio and virtual classrooms", "Screen sharing and whiteboard", "Lesson sessions and moderation", "Platform integration (not upstream BBB core)"] }
+  ],
+  "13": [
+    { title: "Product", items: ["Expert Hive OS — intelligent school operating system by Expert Hive Technologies", "Repository codename: EduFlow", "Currently in private beta evaluation (not publicly available)"] },
+    { title: "Roles", items: ["Owner — billing, subscriptions, analytics", "Principal — staff, academics, payroll, teacher approval", "Teacher — classes, attendance, assessments", "Parent — attendance, report cards, announcements"] },
+    { title: "Stack", items: ["Backend: Django 3.12+, DRF, SimpleJWT, PostgreSQL", "Frontend: React, Vite, TypeScript, Axios", "Integrations: Paystack, Groq AI, Cloudflare R2"] },
+    { title: "Engineering", items: ["12 documented API modules with OpenAPI schema", "School-scoped RBAC with JWT rotation", "RC2 production hardening pass", "Function-based views, comprehensive docs/"] }
+  ],
+  "14": [
+    { title: "Research approach", items: ["Paired with-skill vs without-skill evaluation", "Safety constraints and negative-result recording", "Progressive disclosure skill format (PSKILL.md)", "BenchFlow 0.6.3 runtime audit"] },
+    { title: "Repository", items: ["Static skill library in skills/", "Validation, hashing, and packaging scripts", "Smoke and scored EXP ablation runs", "Kaggle Agent Skill Lift competition entry"] }
+  ],
   "10": [
+    { title: "Product", items: ["Expert Hive OS — intelligent school operating system by Expert Hive Technologies", "Repository codename: EduFlow", "Currently in private beta evaluation (not publicly available)"] },
     { title: "Roles", items: ["Owner — billing, subscriptions, analytics", "Principal — staff, academics, payroll, teacher approval", "Teacher — classes, attendance, assessments", "Parent — attendance, report cards, announcements"] },
     { title: "Stack", items: ["Backend: Django 3.12+, DRF, SimpleJWT, PostgreSQL", "Frontend: React, Vite, TypeScript, Axios", "Integrations: Paystack, Groq AI, Cloudflare R2"] },
     { title: "Engineering", items: ["12 documented API modules with OpenAPI schema", "School-scoped RBAC with JWT rotation", "RC2 production hardening pass", "Function-based views, comprehensive docs/"] }
@@ -22,7 +42,7 @@ export const DETAIL_SECTIONS = {
     { title: "Package", items: ["Published on npm as react-typeflare", "Typewriter + confetti animations", "Reverse loop and pause-on-hover", "Customizable cursor and speeds"] }
   ],
   "4": [
-    { title: "Detection", items: ["Random Forest on CICIDS 2018 + SCVIC-APT", "Autoencoder anomaly detection", "Live packet capture via Npcap", "Flask web dashboard on :5000"] }
+    { title: "Detection", items: ["Random Forest on CICIDS 2018 + SCVIC-APT", "Autoencoder anomaly detection", "Live packet capture via Npcap", "Flask web dashboard"] }
   ],
   "3": [
     { title: "Features", items: ["Q&A, video courses, live classes, materials store", "React Native + Expo frontend", "Django REST + Firebase backend", "Wallet, push notifications, real-time chat"] }
@@ -36,8 +56,18 @@ export const DETAIL_SECTIONS = {
 };
 
 export const DETAIL_IMAGES = {
+  "11": [
+    { src: "https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959", title: "Expert Hive Tutors" },
+    { src: "https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741", title: "Platform" }
+  ],
+  "12": [
+    { src: "https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741", title: "Virtual classroom" }
+  ],
+  "14": [
+    { src: "https://raw.githubusercontent.com/Tobi-joshua/benchflow-agent-skill-lift/main/docs/assets/kaggle-card-560x280.png", fallback: "assets/images/eduflow-preview.svg", title: "BenchFlow Skill Lift" }
+  ],
   "10": [
-    { src: "assets/images/eduflow.png", fallback: "assets/images/eduflow-preview.svg", title: "EduFlow UI" }
+    { src: "assets/images/eduflow.png", fallback: "assets/images/eduflow-preview.svg", title: "Expert Hive OS" }
   ],
   "9": [
     { src: "https://raw.githubusercontent.com/Tobi-joshua/Biohub---Cell-Tracking-During-Development/main/figures/pipeline_overview.png", title: "Pipeline" },
