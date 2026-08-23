@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project — Tobi Joshua</title>
+  <title>Project — Tobi Joshua Samuel</title>
   <link rel="icon" href="https://ik.imagekit.io/experthivetutors/ChatGPT%20Image%20Aug%207,%202025,%2006_07_53%20AM.png?updatedAt=1754572188208" type="image/png" />
   <script>
     (function () {
@@ -12,9 +12,9 @@
     })();
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/tokens.css?v=20260711" />
-  <link rel="stylesheet" href="assets/css/base.css?v=20260711" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260711" />
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20260823" />
+  <link rel="stylesheet" href="assets/css/base.css?v=20260823" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260823" />
 </head>
 <body>
   <div id="nav"></div>
@@ -26,20 +26,20 @@
 
   <div id="footer"></div>
 
-  <div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal__box">
-      <h3>Private Repository</h3>
-      <p>Email <a href="mailto:info@experthivetutors.com">info@experthivetutors.com</a> for access.</p>
+      <h3 id="modal-title">Private Production System</h3>
+      <p>This is a private repository or proprietary production system. Email <a href="mailto:admin@experthivetech.com">admin@experthivetech.com</a> to discuss access or collaboration.</p>
       <button class="btn btn--primary modal__close">Close</button>
     </div>
   </div>
 
   <script type="module">
     import {
-      loadData, renderNav, renderFooter, badgeClass, badgeLabel, bindModal
-    } from "./assets/js/app.js?v=20260711";
-    import { bindTheme } from "./assets/js/theme.js?v=20260711";
-    import { DETAIL_SECTIONS, DETAIL_IMAGES } from "./assets/js/project-detail.js?v=20260711";
+      loadData, renderNav, renderFooter, badgeClass, badgeLabel, bindModal, bindNav
+    } from "./assets/js/app.js?v=20260823";
+    import { bindTheme } from "./assets/js/theme.js?v=20260823";
+    import { DETAIL_SECTIONS, DETAIL_IMAGES } from "./assets/js/project-detail.js?v=20260823";
 
     const id = new URLSearchParams(location.search).get("id");
     const data = await loadData();
@@ -52,8 +52,8 @@
     if (!p) {
       el.innerHTML = `<div class="prose"><p>Project not found.</p></div>`;
     } else {
-      document.title = `${p.title} — Tobi Joshua`;
-      const images = DETAIL_IMAGES[id] || [{ src: p.thumbnail, title: p.title }];
+      document.title = `${p.title} — Tobi Joshua Samuel`;
+      const images = DETAIL_IMAGES[id] || [{ src: p.thumbnail, fallback: p.thumbnailFallback, title: p.title }];
       const sections = DETAIL_SECTIONS[id] || [];
 
       const gallery = images.length ? `
@@ -69,8 +69,25 @@
 
       const links = [];
       if (p.links?.github) links.push(`<a href="${p.links.github}" class="btn btn--primary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repository</a>`);
-      if (p.links?.demo) links.push(`<a href="${p.links.demo}" class="btn btn--ghost" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live demo</a>`);
-      if (p.private) links.push(`<button class="btn btn--ghost private-link"><i class="fas fa-lock"></i> Request access</button>`);
+      if (p.links?.demo) links.push(`<a href="${p.links.demo}" class="btn btn--ghost" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live site</a>`);
+      if (p.private) links.push(`<button class="btn btn--ghost private-link"><i class="fas fa-lock"></i> Private system</button>`);
+
+      const metaRows = [];
+      if (p.category) metaRows.push({ label: "Category", value: p.category });
+      if (p.role) metaRows.push({ label: "My role", value: p.role });
+      if (p.problem) metaRows.push({ label: "Problem", value: p.problem });
+      if (p.private) metaRows.push({ label: "Access", value: "Private production system" });
+
+      const metaHtml = metaRows.length ? `
+        <div class="detail-meta">
+          ${metaRows.map((r) => `
+            <div class="detail-meta__row">
+              <span class="detail-meta__label">${r.label}</span>
+              <span class="detail-meta__value">${r.value}</span>
+            </div>
+          `).join("")}
+        </div>
+      ` : "";
 
       el.innerHTML = `
         <div class="detail-hero">
@@ -88,7 +105,8 @@
         ${gallery}
         <div class="prose">
           <p>${p.summary}</p>
-          ${p.highlights?.length ? `<h4>Highlights</h4><ul>${p.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>` : ""}
+          ${metaHtml}
+          ${p.highlights?.length ? `<h4>Key features</h4><ul>${p.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>` : ""}
           ${sections.map((s) => `<h4>${s.title}</h4><ul>${s.items.map((i) => `<li>${i}</li>`).join("")}</ul>`).join("")}
         </div>
         <div class="detail-links">${links.join("")}</div>
@@ -97,6 +115,7 @@
 
     bindModal();
     bindTheme();
+    bindNav();
   </script>
 </body>
 </html>

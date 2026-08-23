@@ -1,46 +1,185 @@
 {
   "profile": {
     "name": "Tobi Joshua Samuel",
-    "title": "Senior Software Engineer · Data Scientist",
-    "tagline": "Full-stack systems, ML pipelines, and production delivery with CI/CD.",
-    "location": "Nigeria",
+    "title": "Founder & Lead Engineer",
+    "headline": "Full-Stack Software Engineer | AI & Agentic Systems Builder",
+    "tagline": "I build production software, AI-assisted systems, and digital products from idea to deployment — combining full-stack engineering, product architecture, automation, and agentic development workflows.",
+    "location": "Oyo State, Nigeria / Remote",
     "years": "4+",
-    "email": "tobilobasam3@gmail.com",
+    "email": "admin@experthivetech.com",
+    "phone": "",
     "linkedin": "https://www.linkedin.com/in/tobi-joshua-aaa08a191/",
     "github": "https://github.com/Tobi-joshua",
     "twitter": "https://x.com/TobiJoshua123",
     "researchgate": "https://www.researchgate.net/profile/Tobi-Samuel-2",
-    "summary": "I design and ship production software — APIs, ML systems, and cloud-native apps — with strong emphasis on automated pipelines, observability, and clean architecture.",
+    "summary": "Founder & Lead Engineer at Expert Hive Technologies. Full-stack software engineer building platforms, AI-assisted systems, and agentic workflows across education, business operations, and production software.",
     "about": [
-      "I'm a data scientist and software engineer with 4+ years designing, building, and deploying machine learning models and full-stack web applications. My core stack is Python, Django, React, and PostgreSQL, with a focus on systems that are reliable in production.",
-      "I founded Expert Hive Tutors, an EdTech platform that connects students with verified tutors for academic support — spanning a React web app, Django REST API, and React Native mobile product used in Nigeria.",
-      "My work includes predictive analytics, deep learning pipelines, enterprise APIs, and client-facing platforms. I collaborate with cross-functional teams, mentor junior developers, and care about turning complex data problems into clear, maintainable software.",
-      "I'm especially interested in data-driven products, fintech, and scalable web systems. When I'm not shipping, I explore new AI tooling, contribute to open source, and share what I learn with the developer community."
+      "I am a full-stack software engineer, founder, and product builder with several years of experience designing and deploying real-world software.",
+      "I founded Expert Hive Technologies to build technology and digital products that solve problems in education, business, professional services, and digital operations.",
+      "My work spans product architecture, backend engineering, APIs, frontend systems, databases, real-time applications, cloud deployment, internal business systems, automation, and AI-assisted development.",
+      "I increasingly work with agentic AI and AI-assisted engineering workflows, using tools such as Cursor and ChatGPT for implementation, debugging, testing, analysis, documentation, code review, research, and rapid product iteration — while maintaining engineering oversight and understanding the underlying systems.",
+      "I also have experience in AI training, data annotation, labeling, model-response evaluation, preference ranking, rubric-based evaluation, RLHF-related workflows, scientific coding evaluation, and quality assurance."
     ],
     "company": {
-      "name": "Expert Hive Tutors",
-      "role": "Founder",
-      "url": "https://experthivetutors.com/"
+      "name": "Expert Hive Technologies",
+      "legalName": "EXPERT HIVE DIGITAL TECHNOLOGIES LTD",
+      "role": "Founder & Lead Engineer",
+      "url": "https://experthivetech.com"
     },
     "avatar": "assets/images/profile.png",
     "avatarFallback": "assets/images/profile-placeholder.svg",
     "cv": "assets/cv/Tobi-Joshua-CV.pdf"
   },
+  "seo": {
+    "title": "Tobi Joshua Samuel | Founder, Full-Stack Engineer & AI Systems Builder",
+    "description": "Portfolio of Tobi Joshua Samuel, Founder & Lead Engineer at Expert Hive Technologies, building full-stack platforms, AI-assisted systems, agentic workflows, education technology, and production software.",
+    "url": "https://tobi-joshua.github.io",
+    "ogImage": "https://ik.imagekit.io/experthivetutors/ChatGPT%20Image%20Aug%207,%202025,%2006_07_53%20AM.png?updatedAt=1754572188208"
+  },
+  "stats": [
+    { "value": "2022", "label": "Founded Expert Hive" },
+    { "value": "4+", "label": "Years shipping" },
+    { "value": "Full-stack", "label": "Product · AI · Mobile" },
+    { "value": "Founder", "label": "Hands-on engineer" }
+  ],
+  "experience": [
+    {
+      "id": "exp-eht",
+      "company": "Expert Hive Technologies",
+      "role": "Founder & Lead Engineer",
+      "period": "2022 – Present",
+      "location": "Oyo State, Nigeria / Remote",
+      "description": "Technical founder and hands-on lead engineer building SaaS platforms, internal operations systems, and education technology products under Expert Hive Technologies.",
+      "highlights": [
+        "Product and technical direction across tutoring, workforce, and school operations platforms",
+        "Full-stack architecture with Django/Python backends and React/TypeScript frontends",
+        "PostgreSQL database design, authentication, RBAC, and payment workflows",
+        "Real-time communication, admin systems, recruitment tooling, and support workflows",
+        "Cloud deployment, AI-assisted development, automation, and technical leadership"
+      ]
+    },
+    {
+      "id": "exp-sonic",
+      "company": "Sonic Plastics Limited",
+      "role": "Software Developer",
+      "period": "2021 – 2022",
+      "location": "Edo State, Nigeria / Remote",
+      "description": "Built and maintained Django-based inventory and business systems with API integrations and real-time data workflows.",
+      "highlights": [
+        "Django inventory systems and REST APIs",
+        "Firebase / Firestore real-time data integration",
+        "Security hardening and code quality improvements",
+        "Mentored junior developers on backend practices"
+      ]
+    },
+    {
+      "id": "exp-stag",
+      "company": "Stag Engineering Limited",
+      "role": "Software Developer",
+      "period": "2019 – 2021",
+      "location": "Lagos State, Nigeria",
+      "description": "Developed mobile and backend systems for field operations, including offline-capable React Native apps and Django REST APIs.",
+      "highlights": [
+        "React Native mobile applications",
+        "Django REST APIs with PostgreSQL",
+        "Offline/mobile systems and field automation",
+        "CI/CD pipelines and scheduled workflows"
+      ]
+    }
+  ],
+  "leadership": {
+    "title": "Technical Leadership",
+    "intro": "I understand the business problem and build the underlying technology — from architecture decisions through production operations.",
+    "points": [
+      "Product strategy and technical direction",
+      "System architecture and API design",
+      "Recruiting technical and operational team members",
+      "Engineering workflows, code review, and technical oversight",
+      "Operations systems, internal tooling, and shipping production software"
+    ]
+  },
+  "aiEngineering": {
+    "title": "AI & Agentic Engineering",
+    "intro": "I use AI as an engineering multiplier — accelerating implementation, evaluation, and iteration while maintaining hands-on ownership of architecture, systems, and quality.",
+    "capabilities": [
+      "Agentic software development",
+      "AI-assisted engineering and prompt-driven implementation",
+      "AI-assisted debugging, test generation, and code review",
+      "Technical research and workflow automation",
+      "LLM response evaluation and preference ranking",
+      "RLHF / preference-evaluation workflows",
+      "Rubric-based grading and human-feedback model evaluation",
+      "Data annotation, labeling, and quality assurance",
+      "Scientific and code evaluation, notebook review",
+      "Regression, fresh-environment, and mutation testing",
+      "Human-in-the-loop review processes"
+    ],
+    "tools": [
+      "Cursor",
+      "ChatGPT",
+      "AI coding agents",
+      "Python",
+      "Git / GitHub",
+      "Jupyter"
+    ]
+  },
+  "skills": {
+    "Languages": ["Python", "JavaScript", "TypeScript", "R", "MATLAB"],
+    "Backend": ["Django", "Django REST Framework", "REST APIs", "WebSockets"],
+    "Frontend": ["React", "React Native", "TypeScript", "HTML", "CSS"],
+    "Data / Databases": ["PostgreSQL", "Redis", "Firestore", "Pandas"],
+    "AI / ML": ["Scikit-learn", "TensorFlow", "LLM evaluation", "Prompt engineering", "RLHF / preference evaluation", "Data annotation", "AI-assisted development"],
+    "Real-time / Communication": ["Redis pub/sub", "WebSockets", "Socket.io", "BigBlueButton"],
+    "Cloud / DevOps": ["Railway", "AWS", "Docker", "Cloudflare", "CI/CD", "GitHub"],
+    "AI Development Tools": ["Cursor", "ChatGPT", "AI coding agents", "Jupyter"],
+    "Engineering": ["System architecture", "API design", "Database design", "RBAC", "Real-time systems", "Product engineering", "Testing", "Automation", "Technical documentation"]
+  },
+  "currentlyBuilding": {
+    "title": "Currently Building",
+    "items": [
+      { "name": "Expert Hive Technologies", "desc": "Company platforms, products, and professional services" },
+      { "name": "Expert Hive Tutors", "desc": "Tutoring marketplace and education workflows" },
+      { "name": "Expert Hive OS", "desc": "Internal recruitment, workforce, and operations platform" },
+      { "name": "Agentic development workflows", "desc": "AI-assisted engineering and automation pipelines" },
+      { "name": "BenchFlow Agent Skill Lift", "desc": "Safe, generalizable agent skill library research" }
+    ]
+  },
+  "delivery": [
+    {
+      "title": "Automated delivery",
+      "text": "GitHub Actions workflows for test, lint, build, and deploy across frontend and backend repositories."
+    },
+    {
+      "title": "Containerized services",
+      "text": "Docker-based environments for reproducible development and production parity on cloud hosts."
+    },
+    {
+      "title": "Production hardening",
+      "text": "Environment-driven configuration, OpenAPI documentation, JWT rotation, and staged production releases."
+    },
+    {
+      "title": "Multi-target deploy",
+      "text": "Railway, AWS, Cloudflare, Streamlit Cloud, and GitHub Pages — each with tailored deployment pipelines."
+    }
+  ],
   "research": {
     "profile": "https://www.researchgate.net/profile/Tobi-Samuel-2",
     "affiliation": "University of Lagos · Lagos, Nigeria",
-    "intro": "Selected papers and proposals on computer vision, medical imaging, security systems, and control engineering.",
+    "intro": "Research work and preprints on medical imaging, agentic AI, security systems, and computational methods.",
     "publications": [
+      {
+        "title": "Development of a Lightweight AI-Assisted Triage Pipeline for Chest Imaging (X-ray / CT)",
+        "type": "Preprint / Research Work",
+        "date": "January 2026",
+        "author": "Tobi Joshua Samuel",
+        "doi": "10.13140/RG.2.2.19454.24647",
+        "topics": ["Chest X-ray and CT triage", "Compact AI models", "Uncertainty estimation", "Calibration", "Explainability (Grad-CAM)", "Edge / low-latency deployment", "Reliability-aware AI"]
+      },
       {
         "title": "Biohub Cell Lineage Tracker: An Open Pipeline and Interactive System for 3D Cell Tracking During Development",
         "type": "Research Proposal",
         "date": "June 2026",
         "projectId": "9"
-      },
-      {
-        "title": "Development of a Lightweight AI-Assisted Triage Pipeline for Chest Imaging (X-ray / CT)",
-        "type": "Preprint",
-        "date": "January 2026"
       },
       {
         "title": "Real-time Intrusion Detection System on Windows: Implementation of a Network-Based Security Information System",
@@ -62,36 +201,89 @@
       }
     ]
   },
-  "stats": [
-    { "value": "4+", "label": "Years shipping" },
-    { "value": "10", "label": "Projects" },
-    { "value": "CI/CD", "label": "Pipelines built" },
-    { "value": "Full-stack", "label": "Web · ML · Mobile" }
-  ],
-  "expertise": [
-    "Python", "TypeScript", "Django", "React", "PostgreSQL",
-    "Machine Learning", "Computer Vision", "LLMs", "Docker",
-    "GitHub Actions", "AWS EC2", "Firebase", "Redis"
-  ],
-  "cicd": [
-    {
-      "title": "Automated delivery",
-      "text": "GitHub Actions workflows for test, lint, build, and deploy across frontend and backend repos."
-    },
-    {
-      "title": "Containerized services",
-      "text": "Docker-based environments for reproducible dev and production parity on cloud hosts."
-    },
-    {
-      "title": "Production hardening",
-      "text": "Environment-driven config, OpenAPI docs, JWT rotation, and staged RC releases (e.g. EduFlow RC2)."
-    },
-    {
-      "title": "Multi-target deploy",
-      "text": "AWS EC2, Streamlit Cloud, PythonAnywhere, and GitHub Pages — each with tailored pipelines."
-    }
-  ],
   "projects": [
+    {
+      "id": "11",
+      "slug": "expert-hive-tutors",
+      "title": "Expert Hive Tutors",
+      "subtitle": "EdTech · Tutoring Platform · Marketplace",
+      "year": 2024,
+      "status": "active",
+      "type": "product",
+      "featured": true,
+      "private": true,
+      "category": "EdTech / Tutoring Platform",
+      "role": "Founder & Lead Engineer — architecture, backend, frontend, mobile",
+      "problem": "Students need reliable access to verified tutors, structured tutoring workflows, and secure payments within a single platform.",
+      "tech": ["Django", "DRF", "React", "React Native", "PostgreSQL", "Firebase", "Paystack"],
+      "thumbnail": "https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959",
+      "summary": "A tutoring and education platform under Expert Hive Technologies — student and tutor onboarding, question/request lifecycle, matching, notifications, dashboards, payments, withdrawals, and operational administration.",
+      "highlights": ["Student & tutor onboarding workflows", "Tutor matching and notifications", "Payments, withdrawals, and support tooling", "Web, API, and mobile product stack"],
+      "links": {
+        "demo": "https://experthivetutors.com/",
+        "github": "https://github.com/Tobi-joshua/Expert-Hive-Tutors-API"
+      }
+    },
+    {
+      "id": "12",
+      "slug": "expert-hive-tutor-meet",
+      "title": "Expert Hive Tutor Meet",
+      "subtitle": "Live education · Virtual classroom",
+      "year": 2024,
+      "status": "active",
+      "type": "product",
+      "featured": true,
+      "private": true,
+      "category": "EdTech / Video Classroom",
+      "role": "Founder & Lead Engineer — platform integration and session workflows",
+      "problem": "Live tutoring sessions require a reliable, branded virtual classroom integrated with the tutoring platform.",
+      "tech": ["BigBlueButton", "Django", "REST APIs", "WebRTC", "Access control"],
+      "thumbnail": "https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741",
+      "summary": "Built and integrated a branded virtual classroom experience on top of BigBlueButton for live tutoring sessions — meeting creation, access control, and student/tutor session workflows connected to the tutoring platform.",
+      "highlights": ["Live video/audio and virtual classrooms", "Screen sharing, whiteboard, and lesson sessions", "Meeting creation and access control", "Integration with Expert Hive Tutors workflows"],
+      "links": {}
+    },
+    {
+      "id": "13",
+      "slug": "expert-hive-os",
+      "title": "Expert Hive OS",
+      "subtitle": "Internal operations · Workforce platform",
+      "year": 2025,
+      "status": "active",
+      "type": "product",
+      "featured": true,
+      "private": true,
+      "category": "Internal Operations / Workforce",
+      "role": "Founder & Lead Engineer — full platform architecture",
+      "problem": "Growing teams need integrated recruitment, workforce management, and internal administration in one auditable system.",
+      "tech": ["Django", "DRF", "React", "TypeScript", "PostgreSQL", "RBAC"],
+      "thumbnail": "assets/images/eduflow-preview.svg",
+      "summary": "Expert Hive Technologies' internal business, workforce, and operations platform — recruitment/ATS, employee lifecycle, payroll records, leave management, weekly reports, approvals, and role-based administration.",
+      "highlights": ["Recruitment: vacancies, applications, scorecards, interviews, offers", "Workforce: onboarding, profiles, leave, payroll, documents", "Admin: RBAC, dashboards, notifications, audit trails"],
+      "links": {}
+    },
+    {
+      "id": "14",
+      "slug": "benchflow-agent-skill-lift",
+      "title": "BenchFlow Agent Skill Lift",
+      "subtitle": "Agentic AI · Research competition",
+      "year": 2026,
+      "status": "competition",
+      "type": "research",
+      "featured": true,
+      "private": false,
+      "category": "AI / Agentic Systems",
+      "role": "Research lead — skill library design and evaluation",
+      "problem": "Agent skills are widely shipped but weakly measured; teams need evidence of safe, generalizable lift on held-out tasks.",
+      "tech": ["Python", "BenchFlow", "Agent skills", "Evaluation harness", "Docker"],
+      "thumbnail": "https://raw.githubusercontent.com/Tobi-joshua/benchflow-agent-skill-lift/main/docs/assets/kaggle-card-560x280.png",
+      "thumbnailFallback": "assets/images/eduflow-preview.svg",
+      "summary": "A research repository for designing, ablating, and submitting safe, generalizable agent skills for the BenchFlow Agent Skill Lift competition — paired evaluation, safety constraints, and progressive disclosure.",
+      "highlights": ["Static skill library with safety/scope tiers", "Paired lift evaluation methodology", "BenchFlow 0.6.3 runtime audit", "Smoke and scored EXP ablations"],
+      "links": {
+        "github": "https://github.com/Tobi-joshua/benchflow-agent-skill-lift"
+      }
+    },
     {
       "id": "10",
       "slug": "eduflow",
@@ -102,10 +294,13 @@
       "type": "product",
       "featured": true,
       "private": true,
+      "category": "EdTech / School Operations",
+      "role": "Lead Engineer — full-stack platform",
+      "problem": "Schools need a unified system for academics, attendance, payroll, billing, and multi-role administration.",
       "tech": ["Django", "DRF", "React", "Vite", "TypeScript", "PostgreSQL", "Groq", "Paystack"],
       "thumbnail": "assets/images/eduflow.png",
       "thumbnailFallback": "assets/images/eduflow-preview.svg",
-      "summary": "Multi-role school ops: academics, attendance, payroll, billing, and AI drafts. JWT RBAC across owner, principal, teacher, and parent roles.",
+      "summary": "Multi-role school operations platform: academics, attendance, payroll, billing, and AI-assisted drafts. JWT RBAC across owner, principal, teacher, and parent roles.",
       "highlights": ["12 API modules", "OpenAPI + Swagger", "RC2 production hardening", "Paystack billing"],
       "links": {}
     },
@@ -117,8 +312,10 @@
       "year": 2026,
       "status": "competition",
       "type": "research",
-      "featured": true,
+      "featured": false,
       "private": false,
+      "category": "Research / Computer Vision",
+      "role": "Lead developer — pipeline and Streamlit UI",
       "tech": ["Python", "Streamlit", "scikit-image", "Zarr", "Computer Vision"],
       "thumbnail": "https://raw.githubusercontent.com/Tobi-joshua/Biohub---Cell-Tracking-During-Development/main/figures/pipeline_overview.png",
       "summary": "Detect, track, and reconstruct cell lineages in 3D+time zebrafish volumes. Hungarian linking, division inference, Streamlit UI, IEEE paper.",
@@ -129,6 +326,24 @@
       }
     },
     {
+      "id": "3",
+      "slug": "hive-tutors-mobile",
+      "title": "Expert Hive Mobile App",
+      "subtitle": "React Native · EdTech",
+      "year": 2024,
+      "status": "completed",
+      "type": "product",
+      "featured": false,
+      "private": true,
+      "category": "EdTech / Mobile",
+      "role": "Lead Engineer — mobile product",
+      "tech": ["React Native", "Expo", "Django", "Firebase", "PostgreSQL"],
+      "thumbnail": "https://ik.imagekit.io/experthivetutors/Screenshot_2025-08-07-12-38-35-009_com.experthivetutors.EHFS.jpg?updatedAt=1754574988667",
+      "summary": "Mobile tutoring and support app: Q&A, video courses, live classes, study materials, wallet transactions, and real-time chat.",
+      "highlights": ["iOS + Android", "Firebase + DRF", "Cloud Functions", "ImageKit media"],
+      "links": {}
+    },
+    {
       "id": "8",
       "slug": "spam-detection-ai",
       "title": "Spam Detection AI",
@@ -136,8 +351,10 @@
       "year": 2025,
       "status": "completed",
       "type": "research",
-      "featured": true,
+      "featured": false,
       "private": false,
+      "category": "ML / NLP",
+      "role": "Developer",
       "tech": ["Python", "Scikit-learn", "Streamlit", "TF-IDF"],
       "thumbnail": "https://ik.imagekit.io/ooiob6xdv/image.png",
       "summary": "SMS spam classifier with TF-IDF + logistic regression, explainable predictions, threshold tuning, and batch CSV inference.",
@@ -149,38 +366,22 @@
     {
       "id": "7",
       "slug": "vyzio",
-      "title": "Vyzio",
+      "title": "Vyzio Classifieds & Ads Marketplace",
       "subtitle": "Classifieds marketplace · client (USA)",
       "year": 2025,
       "status": "completed",
       "type": "client",
       "featured": false,
       "private": false,
+      "category": "Marketplace",
+      "role": "Full-stack developer",
       "tech": ["Django", "DRF", "React", "PostgreSQL", "Stripe"],
       "thumbnail": "https://ik.imagekit.io/ooiob6xdv/d1.png?updatedAt=1755605086287",
-      "summary": "Paid listings platform with multi-image ads, admin review queue, and Stripe / mobile money / crypto payments.",
+      "summary": "Paid listings platform with multi-image ads, admin review queue, moderation, and Stripe / mobile money / crypto payments.",
       "highlights": ["Admin approval flow", "Multi-image CDN", "Payment integrations", "Live production"],
       "links": {
         "github": "https://github.com/Tobi-joshua/Vyzio-Ad-Website-Clean",
         "demo": "https://vyzioads.pythonanywhere.com/"
-      }
-    },
-    {
-      "id": "6",
-      "slug": "bigquery-ai-helpdesk",
-      "title": "AI Developer Helpdesk",
-      "subtitle": "BigQuery AI Hackathon · Kaggle",
-      "year": 2025,
-      "status": "competition",
-      "type": "research",
-      "featured": false,
-      "private": false,
-      "tech": ["BigQuery AI", "Embeddings", "Python", "Plotly"],
-      "thumbnail": "https://ik.imagekit.io/ooiob6xdv/AI-Powered%20Developer%20Helpdesk1755041295.jpg?updatedAt=1755169343431",
-      "summary": "Stack Overflow Q&A pipeline: AI summarization, vector embeddings, semantic search, and t-SNE cluster viz.",
-      "highlights": ["AI.GENERATE summaries", "Vector search", "Cost-optimized BQ pipeline", "Kaggle notebook"],
-      "links": {
-        "demo": "https://www.kaggle.com/code/tobijoshua/ai-developer-help-desk-q-a"
       }
     },
     {
@@ -193,9 +394,11 @@
       "type": "opensource",
       "featured": false,
       "private": false,
+      "category": "Open Source / Frontend",
+      "role": "Author & maintainer",
       "tech": ["React", "TypeScript", "npm"],
       "thumbnail": "https://raw.githubusercontent.com/Tobi-joshua/react-typeflare/main/assets/basic_usage_with_confetti-ezgif.com-optimize.gif",
-      "summary": "Typewriter animation component with confetti, reverse loop, pause-on-hover, and cursor customization.",
+      "summary": "Typewriter animation component with confetti, reverse loop, pause-on-hover, and cursor customization — published on npm.",
       "highlights": ["Published on npm", "Lightweight API", "Confetti effects", "Event callbacks"],
       "links": {
         "github": "https://github.com/Tobi-joshua/react-typeflare",
@@ -205,50 +408,58 @@
     {
       "id": "4",
       "slug": "intrusion-detection",
-      "title": "Real-time IDS",
+      "title": "Real-Time Intrusion Detection System",
       "subtitle": "Network security · Windows",
       "year": 2024,
       "status": "completed",
       "type": "research",
       "featured": false,
       "private": false,
+      "category": "ML / Security",
+      "role": "Developer",
       "tech": ["Python", "Random Forest", "Autoencoder", "Flask"],
       "thumbnail": "https://ik.imagekit.io/experthivetutors/ds.png?updatedAt=1754607867802",
-      "summary": "ML-based intrusion detection: supervised Random Forest for known attacks, autoencoder for anomaly detection, web dashboard.",
-      "highlights": ["Live packet capture", "Dual-model detection", "Web UI on :5000", "CICIDS 2018 trained"],
+      "summary": "ML-based intrusion detection: supervised Random Forest for known attacks, autoencoder for anomaly detection, and a web monitoring dashboard.",
+      "highlights": ["Live packet capture", "Dual-model detection", "Web UI dashboard", "CICIDS 2018 trained"],
       "links": {
         "github": "https://github.com/Tobi-joshua/Real-time-Intrusion-Detection-System-on-Windows"
       }
     },
     {
-      "id": "3",
-      "slug": "hive-tutors-mobile",
-      "title": "Hive Tutors Mobile",
-      "subtitle": "React Native · EdTech",
-      "year": 2024,
-      "status": "completed",
-      "type": "product",
+      "id": "6",
+      "slug": "bigquery-ai-helpdesk",
+      "title": "AI Developer Helpdesk",
+      "subtitle": "BigQuery AI Hackathon · Kaggle",
+      "year": 2025,
+      "status": "competition",
+      "type": "research",
       "featured": false,
-      "private": true,
-      "tech": ["React Native", "Expo", "Django", "Firebase", "PostgreSQL"],
-      "thumbnail": "https://ik.imagekit.io/experthivetutors/Screenshot_2025-08-07-12-38-35-009_com.experthivetutors.EHFS.jpg?updatedAt=1754574988667",
-      "summary": "Academic app: Q&A, video courses, live classes, study materials, wallet transactions, and real-time chat.",
-      "highlights": ["iOS + Android", "Firebase + DRF", "Cloud Functions", "ImageKit media"],
-      "links": {}
+      "private": false,
+      "category": "AI / Data",
+      "role": "Developer",
+      "tech": ["BigQuery AI", "Embeddings", "Python", "Plotly"],
+      "thumbnail": "https://ik.imagekit.io/ooiob6xdv/AI-Powered%20Developer%20Helpdesk1755041295.jpg?updatedAt=1755169343431",
+      "summary": "Stack Overflow Q&A pipeline: AI summarization, vector embeddings, semantic search, and t-SNE cluster visualization.",
+      "highlights": ["AI.GENERATE summaries", "Vector search", "Cost-optimized BQ pipeline", "Kaggle notebook"],
+      "links": {
+        "demo": "https://www.kaggle.com/code/tobijoshua/ai-developer-help-desk-q-a"
+      }
     },
     {
       "id": "2",
       "slug": "expert-hive-api",
       "title": "Expert Hive Tutors API",
-      "subtitle": "Django REST · EdTech",
+      "subtitle": "Django REST · EdTech backend",
       "year": 2024,
       "status": "completed",
       "type": "product",
       "featured": false,
       "private": false,
+      "category": "EdTech / API",
+      "role": "Founder & Lead Engineer",
       "tech": ["Django", "DRF", "PostgreSQL", "Swagger"],
       "thumbnail": "https://ik.imagekit.io/experthivetutors/Screenshot%202025-08-07%20081829.png?updatedAt=1754580024741",
-      "summary": "Backend for tutoring marketplace: question management, tutor notifications via email/SMS, OpenAPI docs.",
+      "summary": "Django REST backend for the tutoring marketplace: question management, tutor notifications via email/SMS, and OpenAPI documentation.",
       "highlights": ["REST API", "Swagger UI", "Email + SMS alerts", "Production deployed"],
       "links": {
         "github": "https://github.com/Tobi-joshua/Expert-Hive-Tutors-API",
@@ -265,10 +476,12 @@
       "type": "product",
       "featured": false,
       "private": true,
-      "tech": ["React", "Django API", "Responsive UI"],
+      "category": "EdTech / Frontend",
+      "role": "Founder & Lead Engineer",
+      "tech": ["React", "Django API", "TypeScript"],
       "thumbnail": "https://ik.imagekit.io/experthivetutors/475547188-b3e3900e-1dcb-4b7a-9107-cda8e82c6112.png?updatedAt=1754575285959",
-      "summary": "Responsive React client for tutoring marketplace — question posting, materials, and secure transactions.",
-      "highlights": ["Django API integration", "Nigerian EdTech", "Production UI", "Private repo"],
+      "summary": "Responsive React client for the tutoring marketplace — question posting, materials, dashboards, and secure transactions.",
+      "highlights": ["Django API integration", "Production UI", "Private repository", "Nigerian EdTech"],
       "links": {
         "demo": "https://experthivetutors.com/"
       }
